@@ -639,10 +639,9 @@ footer {
 }
 
 
-.personal__image {
+.personal__image, img {
     background-position: center;
     background-size: cover;
-    background: url('https://www.lsretail.com/hs-fs/hubfs/BLOG_reduce-waste-grow-loyalty-coffee-shop-1.jpg?width=826&height=413&name=BLOG_reduce-waste-grow-loyalty-coffee-shop-1.jpg');
     /*padding: 150px 690px 20px 690px;*/
     width: 813px;
     height: 400px;

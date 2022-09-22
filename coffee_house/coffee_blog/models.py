@@ -7,16 +7,16 @@ class Blog(models.Model):
     image = models.ImageField(upload_to='img')
     text = models.TextField()
     short_description = models.CharField(max_length=250, default='')
-    url = models.SlugField()
     is_published = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    slug = models.SlugField(unique=True)
 
     def __str__(self):
         return self.title
 
     def get_absolute_url(self):
-        return reverse("blog-detail", kwargs={"slug": self.pk})
+        return reverse("blog-detail", kwargs={"blog_slug": self.slug})
 
 
 class Order(models.Model):

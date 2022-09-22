@@ -26,6 +26,8 @@ class OrderView(ListView):
 class BlogDetailView(DetailView):
     model = Blog
     template_name = 'personal_page.html'
+    slug_url_kwarg = 'blog_slug'
+    context_object_name = 'post_blogs'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)

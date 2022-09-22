@@ -12,7 +12,7 @@
   <div class="personal_page_container">
     <div class="blog__page">
       <p class="personal__title">{{ object.title|safe }}</p>
-      <div class="personal__image"></div>
+      <div><img src="{{ object.image.url }}" class="personal__image" alt="image"></div>
       <div class="personal__text">{{ object.text|safe }}</div>
 <!--      <iframe width="560" height="315" src="https://www.youtube.com/embed/BL8z5kHLezE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>-->
 <!--      </iframe>-->
