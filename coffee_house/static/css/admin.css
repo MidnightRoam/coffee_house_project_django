@@ -1,4 +1,10 @@
 #header, .module caption {
     background-color: #BC8F66;
     color: rgb(133, 80, 12);
+    border: 1px solid black;
+}
+
+div.breadcrumbs {
+    background: #BC8F66;
+    border: 1px solid black;
 }

@@ -786,3 +786,31 @@ iframe {
   color: #BC8F66;
   border: 0.5px solid #BC8F66;
 }
+
+.fa-pinterest:hover, .fa-youtube:hover {
+    color: #FF0000;
+    border-color: #FF0000;
+}
+
+.fa-facebook:hover {
+    color: #4267B2;
+    border-color: #4267B2;
+}
+
+.fa-twitter:hover {
+    color: #1DA1F2;
+    border-color: #1DA1F2;
+}
+
+.fa-instagram:hover {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    -webkit-background-clip: text;
+          /* Also define standard property for compatibility */
+          background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-color: #C13584;
+}
+
+.menu__home a.selected {
+    color: red;
+}
