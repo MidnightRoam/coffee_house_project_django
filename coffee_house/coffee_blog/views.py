@@ -15,6 +15,12 @@ class IndexView(ListView):
 class OrderView(ListView):
     template_name = 'order.html'
     model = Order
+    context_object_name = 'order'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'Order page'
+        return context
 
 
 class BlogDetailView(DetailView):

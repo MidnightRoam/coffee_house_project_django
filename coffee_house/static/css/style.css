@@ -8,7 +8,7 @@
 
 .container, header {
     max-width: 1905px;
-    height: 750px;
+    height: 700px;
     background: #fff;
 }
 
@@ -106,7 +106,7 @@ header {
     margin-left: 295px;
     margin-right: 100px;
     margin-bottom: 59px;
-    border-radius: 5%;
+    border-radius: 1em;
 }
 
 .story__text {
@@ -145,7 +145,7 @@ header {
 }
 
 .blog__card {
-    border-radius: 5%;
+    border-radius: 1em;
     width: 365px;
     height: 484px;
     background: #FFFFFF;
@@ -200,7 +200,10 @@ header {
     height: 216px;
     background-position: center;
     background-size: cover;
-    padding: 24px 20px 24px 20px;
+    margin: 24px 20px 24px 20px;
+    border: 5px solid #BC8F66;
+    border-radius: 1em;
+    border-top-right-radius: 10% 30%;
 }
 
 .card__text {
@@ -212,6 +215,18 @@ header {
     line-height: 27px;
     color: #000000;
     padding: 0px 20px 46px 20px;
+}
+
+.card__date {
+    color: grey;
+    margin-left: 175px;
+    margin-top: 20px;
+    width: 325px;
+    height: 108px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 27px;
 }
 
 .contact {
@@ -293,7 +308,7 @@ header {
 }
 
 .footer {
-    height: 150px;
+    height: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -335,12 +350,17 @@ header {
 }
 
 .nav__home {
+    position: fixed;
+    background: #fff;
     width:  1905px;
     height: 110px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+    right: calc((100% - 1920px) / 50);
+    -webkit-box-shadow: 10px 10px 126px -27px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 126px -27px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 126px -27px rgba(0,0,0,0.75);
 }
 
 .navbar__order {
@@ -571,15 +591,29 @@ input::placeholder {
 }
 
 footer {
-    width: 1905px;
+    width: 100%;
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     text-transform: uppercase;
     font-style: normal;
     font-weight: 300;
     font-size: 20px;
     line-height: 30px;
+    height: 150px;
+}
+
+.footer_left {
+    display: inline;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.footer_center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .blog__page {
@@ -612,7 +646,7 @@ footer {
     /*padding: 150px 690px 20px 690px;*/
     width: 813px;
     height: 400px;
-    border-radius: 5%;
+    border-radius: 1em;
     border: 1.5px solid grey;
 }
 
@@ -643,4 +677,60 @@ footer {
 iframe {
     padding-top: 50px;
     width: 25%;
+}
+
+.social-media__icons {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+/* Style all font awesome icons */
+.fa {
+  padding: 10px;
+  margin: 10px;
+  font-size: 10px;
+  width: 40px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+  background: inherit;
+  color: #BC8F66;
+  border: 0.5px solid #BC8F66;
+}
+
+/* Twitter */
+.fa-twitter {
+  background: inherit;
+  color: #BC8F66;
+  border: 0.5px solid #BC8F66;
+}
+
+.fa-youtube {
+  background: inherit;
+  color: #BC8F66;
+  border: 0.5px solid #BC8F66;
+}
+
+.fa-instagram {
+  background: inherit;
+  color: #BC8F66;
+  border: 0.5px solid #BC8F66;
+}
+
+.fa-pinterest {
+  background: inherit;
+  color: #BC8F66;
+  border: 0.5px solid #BC8F66;
 }

@@ -1,10 +1,12 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block title %}<title>Order page</title>{% endblock %}
+
 {% block content %}
     <header class="navbar__order">
         <a href="{% url 'index-view' %}" class="back__arrow">&#8592;</a>
-        <a href="{% url 'index-view' %}" class="logo">COFFEE HOUSE</a>
+        <a href="{% url 'index-view' %}" class="logo">ORDERING</a>
     </header>
 
     <div class="container">
@@ -67,12 +69,6 @@
             </div>
         </div>
     </div>
-{% endblock %}
-
-{% block footer %}
-    <footer>
-        <p>Copyright © 2022</p>
-    </footer>
 {% endblock %}
 
 {% block script %}

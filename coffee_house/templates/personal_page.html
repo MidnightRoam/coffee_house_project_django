@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block title %}<title>Blog page</title>{% endblock %}
+
 {% block content %}
   <header class="navbar__order">
     <a href="{% url 'index-view' %}" class="back__arrow">&#8592;</a>
@@ -17,10 +19,4 @@
       <a href="{% url 'index-view' %}" class="btn btn__blog">back to home</a>
     </div>
   </div>
-{% endblock %}
-
-{% block footer %}
-  <footer class="footer">
-    <p>Copyright © 2022</p>
-  </footer>
 {% endblock %}
