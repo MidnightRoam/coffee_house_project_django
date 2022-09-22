@@ -120,6 +120,7 @@ header {
     padding-top: 80px;
     padding-left: 40px;
     padding-right: 123px;
+    text-align: justify;
 }
 
 .blog {
@@ -215,6 +216,7 @@ header {
     line-height: 27px;
     color: #000000;
     padding: 0px 20px 46px 20px;
+    text-align: justify;
 }
 
 .card__date {
@@ -593,8 +595,7 @@ input::placeholder {
 footer {
     width: 100%;
     display: flex;
-    justify-content: center;
-    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
     text-transform: uppercase;
     font-style: normal;
@@ -611,9 +612,27 @@ footer {
 }
 
 .footer_center {
+    padding-left: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.footer_right {
+    padding-left: 100px;
+}
+
+.footer__logo {
+    text-decoration: none;
+    color: black;
+    width: 100px;
+    height: 53px;
+
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 53px;
+    text-align: center;
+    text-transform: uppercase;
 }
 
 .blog__page {
@@ -658,6 +677,18 @@ footer {
     font-size: 24px;
     line-height: 30px;
     text-align: justify;
+}
+
+.personal__date {
+    color: grey;
+    width: 43%;
+    padding-top: 55px;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 24px;
+    line-height: 30px;
+    text-align: justify;
+    padding-left: 500px;
 }
 
 .btn__blog {
