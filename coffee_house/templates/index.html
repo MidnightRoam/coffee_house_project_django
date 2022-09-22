@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="container">
+        <div class="header">
+            <div class="nav__home">
+                <a href="{% url 'index-view' %}" class="logo">Coffee House</a>
+                <ul class="menu__home">
+                    <li class="menu__li"><a href="{% url 'order' %}" class="link link__order">Make an order</a></li>
+                    <li class="menu__li"><a href="{% url 'index-view' %}" class="link">Home</a></li>
+                    <li class="menu__li"><a href="#story" class="link">Story</a></li>
+                    <li class="menu__li"><a href="#blog" class="link">Blog</a></li>
+                    <li class="menu__li"><a href="#subscribe" class="link">Subscribe</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="main">
+            <div class="home">
+                <div class="home__image"></div>
+                <p class="home__title">TAKE YOUR TIME</p>
+                <div class="line"></div>
+            </div>
+            <div class="story">
+                <p class="story__title" id="story">STORY</p>
+                <div class="story__image text-image-left"></div>
+                <div class="story__text text-image-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean varius eget arcu quis cursus. Nunc id tortor imperdiet, vestibulum orci sed, gravida orci. Cras a enim ac elit eleifend euismod. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent mattis ultrices est, congue ullamcorper erat bibendum pulvinar. In accumsan dapibus accumsan. Maecenas semper est ut nunc feugiat, vel ultrices ligula commodo. Donec eget pulvinar nunc, eget pharetra risus.</div>
+            </div>
+            <div class="blog">
+                <p class="blog__title" id="blog">BLOG</p>
+                <div class="card__container">
+                    {% for post in blogs %}
+                    <div class="blog__card card-left">
+                        <p class="card__title"><a href="{{ blog.get_absolute_url }}" class="card__link">{{ post.title }}</a></p>
+                        <div class="card__image"><img src="{{ post.image.url }}" alt="image"></div>
+                        <div class="card__text">{{ post.short_description }}.</div>
+                    </div>
+                    {% endfor %}
+<!--                    <div class="blog__card">-->
+<!--                        <p class="card__title"><a href="{{ blog.get_absolute_url }}" class="card__link">Dutch Coffee Chains</a></p>-->
+<!--                        <div class="card__image"><img src="https://source.unsplash.com/TYIzeCiZ_60/1920x1080" alt=""></div>-->
+<!--                        <div class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean varius eget arcu quis cursus. Nunc id tortor imperdiet, vestibulum orci sed, gravida orci. Cras a enim ac elit eleifend euismod.</div>-->
+<!--                    </div>-->
+<!--                    <div class="blog__card card-right">-->
+<!--                        <p class="card__title"><a href="{{ blog.get_absolute_url }}" class="card__link">Start Up In Minneapolis</a></p>-->
+<!--                        <div class="card__image"><img src="https://source.unsplash.com/9rTEwV_G0Do/1920x1080" alt=""></div>-->
+<!--                        <div class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean varius eget arcu quis cursus. Nunc id tortor imperdiet, vestibulum orci sed, gravida orci. Cras a enim ac elit eleifend euismod.</div>-->
+<!--                    </div>-->
+                </div>
+            </div>
+            <div class="contact">
+                <p class="contact__title" id="subscribe">Subscribe</p>
+                <div class="contact__field">
+                    <input id="contact" type="text" class="contact__input" placeholder="enter your email">
+                    <label for="contact"></label>
+                </div>
+                <button class="contact__button">SUBMIT</button>
+            </div>  
+        </div>
+{% endblock %}
+
+{% block footer %}
+        <div class="footer">
+            <p class="footer__text">© COPYRIGHT 2022</p>
+        </div>
+    </div>
+{% endblock %}

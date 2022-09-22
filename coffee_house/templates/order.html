@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <header class="navbar__order">
+        <a href="{% url 'index-view' %}" class="back__arrow">&#8592;</a>
+        <a href="{% url 'index-view' %}" class="logo">COFFEE HOUSE</a>
+    </header>
+
+    <div class="container">
+        <div class="menu__order">
+            <div class="contact__inputs">
+                <div class="surname__input input__left">
+                    <input type="text" id="surname" placeholder="Enter a surname">   
+                </div>
+                <div class="name__input">
+                    <input type="text" id="name" placeholder="Enter a name">  
+                </div> 
+            </div>
+
+            <div class="order">
+                <div class="order__coffee">
+                    <div class="item item__top">
+                        <input class="checkbox" type="checkbox" id="checkbox1" name="goods" value="8" data-goods="espresso">
+                        <label class="checkbox__label" for="checkbox1">Espresso €8</label>
+                        <input type="number" id="espresso" value="0">
+                    </div>
+                    <div class="item">
+                        <input class="checkbox" type="checkbox" id="checkbox2" name="goods" value="10" data-goods="latte">
+                        <label class="checkbox__label" for="checkbox2">Latte €10</label>
+                        <input type="number" id="latte" value="0">
+                    </div>
+                    <div class="item">
+                        <input class="checkbox" type="checkbox" id="checkbox3" name="goods" value="10" data-goods="capuchino">
+                        <label class="checkbox__label" for="checkbox3">Capuchino €10</label>
+                        <input type="number" id="capuchino" value="0">
+                    </div>
+                    <div class="item">
+                        <input class="checkbox" type="checkbox" id="checkbox4" name="goods" value="9" data-goods="americano">
+                        <label class="checkbox__label" for="checkbox4">Americano €9</label>
+                        <input type="number" id="americano" value="0">
+                    </div>
+                </div>
+    
+                <div class="order__food">
+                    <div class="item">
+                        <input class="checkbox" type="checkbox" id="checkbox5" name="goods" value="8" data-goods="chocolate_muffin">
+                        <label class="checkbox__label" for="checkbox5">Chocolate Muffin €8</label>
+                        <input type="number" id="chocolate_muffin" value="0" data-price="8" onchange="totalCounting()">
+                    </div>
+                    <div class="item">
+                        <input class="checkbox" type="checkbox" id="checkbox6" name="goods" value="9" data-goods="blueberry_muffin">
+                        <label class="checkbox__label" for="checkbox6">Blueberry Muffin €9</label>
+                        <input type="number" id="blueberry_muffin" value="0">
+                    </div>
+                    <div class="item">
+                        <input class="checkbox" type="checkbox" id="checkbox7" name="goods" value="10" data-goods="apple_tart">
+                        <label class="checkbox__label" for="checkbox7">Apple Tart €10</label>
+                        <input type="number" id="apple_tart" value="0">
+                    </div>
+                </div>
+            </div>
+
+            <div class="order__final">
+                <p class="total">Total: <span class="result"></span></p>
+                <button class="btn">Place an order</button>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block footer %}
+    <footer>
+        <p>Copyright © 2022</p>
+    </footer>
+{% endblock %}
+
+{% block script %}
+    <script src="{% static 'js/script.js' %}"></script>
+{% endblock %}
