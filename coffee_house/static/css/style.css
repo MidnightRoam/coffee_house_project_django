@@ -836,7 +836,7 @@ iframe {
 }
 
 .profile-container {
-    height: 1500px;
+    height: 1300px;
     background: #817070;
     display: flex;
     justify-content: center;
@@ -898,4 +898,43 @@ iframe {
 
 #born__input, #sex__input {
     margin-top: 25px;
+}
+
+/* signup page stylization */
+
+.signup-container {
+    display: flex;
+    justify-content: center;
+    height: 1300px;
+    background: #817070;
+}
+
+.signup-page {
+    height: 1300px;
+}
+
+.registration-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.signup__btn__margin {
+    margin-left: 60px;
+}
+
+.signup__title__margin {
+    margin-top: 500px;
+}
+
+#name__signup {
+    margin-top: 50px;
+    margin-right: 20px;
+}
+
+#surname__signup {
+    margin-top: 20px;
+}
+
+#email__signup {
+    margin-top: 20px;
 }
