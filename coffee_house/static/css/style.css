@@ -730,12 +730,13 @@ iframe {
     width: 25%;
 }
 
+/* Style all font awesome icons */
 .social-media__icons {
     display: flex;
     justify-content: center;
     text-align: center;
 }
-/* Style all font awesome icons */
+
 .fa {
   padding: 10px;
   margin: 10px;
@@ -810,6 +811,68 @@ iframe {
     border-color: #C13584;
 }
 
-.menu__home a.selected {
-    color: red;
+/* Profile stylization */
+
+.profile__fullname {
+    color: #fff;
+    text-align: center;
+    margin-top: 35px;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 55px;
+    line-height: 53px;
+    border-bottom: 3px solid #fff;
+    padding-bottom: 15px;
+}
+
+.profile__title {
+    color: #fff;
+    text-align: center;
+    margin-top: 55px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 53px;
+    text-transform: uppercase;
+}
+
+.profile-container {
+    height: 1500px;
+    background: #817070;
+    display: flex;
+    justify-content: center;
+}
+
+.profile__avatar {
+    margin-top: 200px;
+    margin-left: 218px;
+    width: 180px;
+    height: 170px;
+    border: 3px solid #6F4E37;
+    border-radius: 50%;
+}
+
+#profile__surname {
+    margin-left: 5px;
+}
+
+#email__input {
+    width: 609px;
+    margin-top: 10px;
+}
+
+#profile__name, #profile__surname {
+    margin-top: 25px;
+}
+
+#city__input, #country__input {
+    margin-top: 10px;
+}
+
+#sex__input, #city__input {
+    margin-left: 5px;
+}
+
+#born__input, #sex__input {
+    margin-top: 25px;
 }

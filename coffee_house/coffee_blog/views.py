@@ -37,3 +37,9 @@ class BlogDetailView(DetailView):
         context['title'] = "Blog Page"
         return context
 
+
+class ProfileView(ListView):
+    template_name = 'profile.html'
+
+    def get_queryset(self):
+        pass
