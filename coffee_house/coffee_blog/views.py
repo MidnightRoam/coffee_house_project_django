@@ -15,7 +15,10 @@ class IndexView(ListView):
 class OrderView(ListView):
     template_name = 'order.html'
     model = Order
-    context_object_name = 'order'
+    context_object_name = 'products'
+
+    # def get_queryset(self):
+    #     return Product.objects.all()[:4]
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)

@@ -19,10 +19,28 @@ class Blog(models.Model):
         return reverse("blog-detail", kwargs={"blog_slug": self.slug})
 
 
+class ProductCategory(models.Model):
+    name = models.CharField("Category", max_length=64)
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = "Category"
+        verbose_name_plural = "Categories"
+
+
+class Product(models.Model):
+    name = models.CharField(max_length=250)
+    price = models.PositiveIntegerField()
+    quantity = models.PositiveIntegerField()
+    category = models.ForeignKey(ProductCategory, on_delete=models.SET_NULL, null=True, blank=True)
+
+    def __str__(self):
+        return self.name
+
+
 class Order(models.Model):
     user_name = models.CharField(max_length=250)
     user_surname = models.CharField(max_length=250)
-    product_name = models.CharField(max_length=250)
-    price = models.PositiveSmallIntegerField()
-    quantity = models.PositiveIntegerField()
-
+    product = models.ForeignKey(Product, on_delete=models.CASCADE, null=True, blank=True)

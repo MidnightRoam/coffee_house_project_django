@@ -3,9 +3,10 @@ from ckeditor_uploader.widgets import CKEditorUploadingWidget
 from django import forms
 from django.utils.safestring import mark_safe
 
-from .models import Blog, Order
+from .models import Blog, Order, Product, ProductCategory
 
 admin.site.register(Order)
+admin.site.register(ProductCategory)
 
 
 class BlogAdminForm(forms.ModelForm):
@@ -29,6 +30,11 @@ class BlogAdmin(admin.ModelAdmin):
             return mark_safe(f"<img src='{object.image.url}' width=50>")
 
     get_blog_image.short_description = "Post image"
+
+
+@admin.register(Product)
+class ProductAdmin(admin.ModelAdmin):
+    list_display = ("name", "price", "quantity", "category")
 
 
 admin.site.site_title = "Coffee House"
