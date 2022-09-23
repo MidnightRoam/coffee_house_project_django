@@ -7,7 +7,7 @@
 }
 
 .container, header {
-    max-width: 1905px;
+    max-width: 1920px;
     height: 700px;
     background: #fff;
 }
@@ -359,7 +359,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    right: calc((100% - 1920px) / 50);
     -webkit-box-shadow: 10px 10px 126px -27px rgba(0,0,0,0.75);
     -moz-box-shadow: 10px 10px 126px -27px rgba(0,0,0,0.75);
     box-shadow: 10px 10px 126px -27px rgba(0,0,0,0.75);

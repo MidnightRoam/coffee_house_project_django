@@ -3,12 +3,11 @@
 
 {% block title %}<title>Blog page</title>{% endblock %}
 
-{% block content %}
-  <header class="navbar__order">
-    <a href="{% url 'index-view' %}" class="back__arrow">&#8592;</a>
-    <a href="{% url 'index-view' %}" class="logo">BLOG PAGE</a>
-  </header>
+{% block custom_header %}
+  <header class="navbar__order"></header>
+{% endblock %}
 
+{% block content %}
   <div class="personal_page_container">
     <div class="blog__page">
       <p class="personal__title">{{ object.title|safe }}</p>

@@ -3,11 +3,12 @@
 
 {% block title %}<title>Order page</title>{% endblock %}
 
-{% block content %}
-    <header class="navbar__order">
-        <a href="{% url 'index-view' %}" class="back__arrow">&#8592;</a>
-        <a href="{% url 'index-view' %}" class="logo">ORDERING</a>
+{% block custom_header %}
+  <header class="navbar__order">
     </header>
+{% endblock %}
+
+{% block content %}
 
     <div class="container">
         <div class="menu__order">

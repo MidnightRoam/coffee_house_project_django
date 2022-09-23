@@ -15,6 +15,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+    {% include 'include/header.html' %}
+
+    {% block custom_header %} {% endblock %}
+
     {% block content %} {% endblock %}
 
     {% block script %} {% endblock %}
