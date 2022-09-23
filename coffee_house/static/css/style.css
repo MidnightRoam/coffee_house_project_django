@@ -812,7 +812,6 @@ iframe {
 }
 
 /* Profile stylization */
-
 .profile__fullname {
     color: #fff;
     text-align: center;
@@ -850,6 +849,30 @@ iframe {
     height: 170px;
     border: 3px solid #6F4E37;
     border-radius: 50%;
+}
+
+.profile__btn {
+    width: 190px;
+    height: 55px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    /* identical to box height */
+    text-transform: uppercase;
+    color: #817070;
+    margin-top: 35px;
+    margin-left: 210px;
+    background: #FFFFFF;
+    border: 3px solid #FFFFFF;
+}
+
+.profile__btn:hover {
+    color: rgb(94, 58, 58);
+    cursor: pointer;
+}
+
+.profile__btn:active {
+    border: 3px solid #817070;
 }
 
 #profile__surname {
