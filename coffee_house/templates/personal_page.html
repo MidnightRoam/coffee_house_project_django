@@ -3,11 +3,8 @@
 
 {% block title %}<title>Blog page</title>{% endblock %}
 
-{% block custom_header %}
-  <header class="navbar__order"></header>
-{% endblock %}
-
 {% block content %}
+  <header class="navbar__order"></header>
   <div class="personal_page_container">
     <div class="blog__page">
       <p class="personal__title">{{ object.title|safe }}</p>
