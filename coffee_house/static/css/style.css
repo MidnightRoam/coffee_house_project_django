@@ -910,8 +910,8 @@ iframe {
     background: #817070;
 }
 
-.signup__page {
-    height: 750px;
+.signup-page {
+    height: 700px;
     padding: 45px;
     border-radius: 0.5em;
     background: #675a5a;
@@ -961,3 +961,67 @@ iframe {
 #password__signup {
     margin-top: 20px;
 }
+
+/* signin page stylization */
+
+.signin-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 970px;
+    background: #817070;
+}
+
+.signin-page {
+    height: 600px;
+    padding: 45px;
+    border-radius: 0.5em;
+    background: #675a5a;
+}
+
+.login-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-info input[type="text"] {
+    border-radius: 0.5em;
+    border-color: #817070;
+}
+
+.login-info input[type="text"]:hover {
+    border-color: #fff;
+}
+
+.login-info input[type="text"]:focus {
+    border-color: #fff;
+}
+
+.signin__btn__style {
+    margin-left: 60px;
+    border-radius: 0.5em;
+}
+
+.signin__title__style {
+    border-bottom: 3px solid #fff;
+    padding-bottom: 5px;
+}
+
+.login__links {
+    color: #fff;
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.login__link {
+    margin-top: 5px;
+    text-decoration: none;
+    color: #C8C8C8;
+}
+
+.login__link:hover {
+    text-decoration: underline;
+}
+
+

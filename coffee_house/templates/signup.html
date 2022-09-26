@@ -5,7 +5,7 @@
 {% block custom_header %} {% endblock %}
 {% block content %}
     <div class="signup-container">
-        <div class="signup__page">
+        <div class="signup-page">
             <p class="profile__title signup__title__style">Sign Up</p>
             <form action="#">
                 <div class="registration-info">
@@ -14,6 +14,9 @@
                     <span><input id="password__signup" type="text" placeholder="Enter your password"></span>
                     <span><input id="email__signup" type="text" placeholder="Enter your email"></span>
                     <button class="profile__btn signup__btn__style">Sign Up</button>
+                    <span class="login__links">
+                        <p>Already a member? <a class="login__link" href="{% url 'signin-view' %}">Sign In</a></p>
+                    </span>
                 </div>
             </form>
         </div>
