@@ -2,17 +2,18 @@
 {% load static %}
 
 {% block title %}<title>Sign Up</title>{% endblock %}
-
+{% block custom_header %} {% endblock %}
 {% block content %}
     <div class="signup-container">
-        <div class="profile__page">
-            <p class="profile__title signup__title__margin">Sign Up</p>
+        <div class="signup__page">
+            <p class="profile__title signup__title__style">Sign Up</p>
             <form action="#">
                 <div class="registration-info">
-                    <span><input id="name__signup" type="text" placeholder="Enter your name"></span>
+                    <span><input class="signup_input" id="name__signup" type="text" placeholder="Enter your name"></span>
                     <span><input id="surname__signup" type="text" placeholder="Enter your surname"></span>
+                    <span><input id="password__signup" type="text" placeholder="Enter your password"></span>
                     <span><input id="email__signup" type="text" placeholder="Enter your email"></span>
-                    <button class="profile__btn signup__btn__margin">Sign Up</button>
+                    <button class="profile__btn signup__btn__style">Sign Up</button>
                 </div>
             </form>
         </div>

@@ -45,8 +45,15 @@ class ProfileView(ListView):
         pass
 
 
-class RegistrationView(ListView):
-    template_name = 'registration.html'
+class SignupView(ListView):
+    template_name = 'signup.html'
+
+    def get_queryset(self):
+        pass
+
+
+class SigninView(ListView):
+    template_name = 'signin.html'
 
     def get_queryset(self):
         pass

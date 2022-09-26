@@ -905,12 +905,16 @@ iframe {
 .signup-container {
     display: flex;
     justify-content: center;
-    height: 1300px;
+    align-items: center;
+    height: 970px;
     background: #817070;
 }
 
-.signup-page {
-    height: 1300px;
+.signup__page {
+    height: 750px;
+    padding: 45px;
+    border-radius: 0.5em;
+    background: #675a5a;
 }
 
 .registration-info {
@@ -918,17 +922,32 @@ iframe {
     flex-direction: column;
 }
 
-.signup__btn__margin {
-    margin-left: 60px;
+.registration-info input[type="text"] {
+    border-radius: 0.5em;
+    border-color: #817070;
 }
 
-.signup__title__margin {
-    margin-top: 500px;
+.registration-info input[type="text"]:hover {
+    border-color: #fff;
+}
+
+.registration-info input[type="text"]:focus {
+    border-color: #fff;
+}
+
+.signup__btn__style {
+    margin-left: 60px;
+    border-radius: 0.5em;
+}
+
+.signup__title__style {
+    border-bottom: 3px solid #fff;
+    padding-bottom: 5px;
 }
 
 #name__signup {
     margin-top: 50px;
-    margin-right: 20px;
+    margin-right: 0px;
 }
 
 #surname__signup {
@@ -936,5 +955,9 @@ iframe {
 }
 
 #email__signup {
+    margin-top: 20px;
+}
+
+#password__signup {
     margin-top: 20px;
 }
