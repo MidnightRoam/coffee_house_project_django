@@ -42,5 +42,5 @@ class Product(models.Model):
 
 class Order(models.Model):
     user_name = models.CharField(max_length=250)
-    user_surname = models.CharField(max_length=250)
+    user = models.CharField(max_length=250)
     product = models.ForeignKey(Product, on_delete=models.CASCADE, null=True, blank=True)

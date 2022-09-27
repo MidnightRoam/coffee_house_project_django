@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}<title>Profile</title>{% endblock %}
+
+{% block content %}
+    <div class="profile-container">
+        <div class="profile-background">
+            <img src="https://64.media.tumblr.com/8252810bc8c531e96ead76339cf0a6ed/tumblr_nr3p4vlQ8S1u0setpo7_r1_500.png" alt="Avatar" class="profile__avatar">
+            <p class="profile__fullname">{% if user %} {{ user }} {% elif not user %} John Doe {% endif %}</p>
+            {% if user %}<p class="user__joined">Joined: {{ user.date_joined }}</p> {% endif %}
+            <p class="profile__title">Contact</p>
+            <form action="#">
+                <div class="full__name">
+                    <span><input id="profile__name" type="text" placeholder="{% if user.first_name %} First name: {{ user.first_name }} {% else %} Name {% endif %}"></span>
+                    <span><input id="profile__surname" type="text" placeholder="{% if user.last_name %} Last name: {{ user.last_name }} {% else %} Last name {% endif %}"></span>
+                </div>
+                <div class="profile__contact">
+                    <div class="email__input">
+                        <span><input id="email__input" type="text" placeholder="{% if user.email %} Email: {{ user.email }} {% else %} Email {% endif %}"></span>
+                    </div>
+                    <p class="profile__title" id="general__title">General</p>
+                    <div class="born__information">
+                        <span><input id="born__input" type="text" placeholder="{% if user.age %} Age: {{ user.age }} {% else %} Age {% endif %}"></span>
+                        <span><input id="sex__input" type="text" placeholder="{% if user.sex %} Sex: {{ user.sex }} {% else %} Sex {% endif %}"></span>
+                    </div>
+                    <div class="location__information">
+                        <span><input id="country__input" type="text" placeholder="{% if user.country %} County: {{ user.country }} {% else %} County {% endif %}"></span>
+                        <span><input id="city__input" type="text" placeholder="{% if user.city %} City: {{ user.city }} {% else %} City {% endif %}"></span>
+                    </div>
+                </div>
+                <button class="profile__btn">Save changes</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

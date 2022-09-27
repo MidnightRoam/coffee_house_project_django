@@ -8,7 +8,6 @@ from .models import Blog, Order, Product, ProductCategory
 admin.site.register(Order)
 admin.site.register(ProductCategory)
 
-
 class BlogAdminForm(forms.ModelForm):
     text = forms.CharField(widget=CKEditorUploadingWidget())
 

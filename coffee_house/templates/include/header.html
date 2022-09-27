@@ -6,9 +6,13 @@
             <li class="menu__li"><a href="{% url 'index-view' %}" class="link">Home</a></li>
             <li class="menu__li"><a href="#story" class="link">Story</a></li>
             <li class="menu__li"><a href="#blog" class="link">Blog</a></li>
-            <li class="menu__li"><a href="{% url 'profile-view' %}" class="link">Profile</a></li>
-            <li class="menu__li"><a href="{% url 'signup-view' %}" class="link">Sign Up</a></li>
-            <li class="menu__li"><a href="{% url 'signin-view' %}" class="link">Sign In</a></li>
+            {% if user.is_authenticated %}
+            <li class="menu__li"><a href="{% url 'accounts:profile-view' %}" class="link">Profile</a></li>
+            <li class="menu__li"><a href="{% url 'logout' %}" class="link">Logout</a></li>
+            {% else %}
+            <li class="menu__li"><a href="{% url 'accounts:signup' %}" class="link">Sign Up</a></li>
+            <li class="menu__li"><a href="{% url 'accounts:signin' %}" class="link">Sign In</a></li>
+            {% endif %}
         </ul>
     </div>
 </div>
