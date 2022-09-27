@@ -413,7 +413,7 @@ header {
     justify-content: center;
 }
 
-input[type="text"], input[type="password"]{
+input[type="text"], input[type="password"], input[type="email"]{
     background-color: inherit;
     width: 300px;
     height: 55px;
@@ -928,7 +928,7 @@ iframe {
 }
 
 .signup-page {
-    height: 700px;
+    height: 600px;
     padding: 45px;
     border-radius: 0.5em;
     background: #675a5a;
@@ -944,21 +944,21 @@ iframe {
     text-align: center;
 }
 
-.registration-info input[type="text"], input[type="password"]{
+.registration-info input[type="text"], input[type="password"], input[type="email"]{
     border-radius: 0.5em;
     border-color: #817070;
 }
 
-.registration-info input[type="text"]:hover, input[type="password"]:hover {
+.registration-info input[type="text"]:hover, input[type="password"]:hover, input[type="email"]:hover {
     border-color: #fff;
 }
 
-.registration-info input[type="text"]:focus, input[type="password"]:focus {
+.registration-info input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus {
     border-color: #fff;
 }
 
 .signup__btn {
-    margin-top: 100px;
+    margin-top: 65px;
     border-radius: 0.5em;
     width: 190px;
     height: 55px;

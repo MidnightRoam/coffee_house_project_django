@@ -8,16 +8,27 @@ from .forms import UserLoginForm, UserRegistrationForm
 
 
 class SignUpView(ListView):
-    form = UserRegistrationForm
-    success_url = reverse_lazy('login')
+    """User registration logic"""
+    form = UserRegistrationForm()
     template_name = 'accounts/signup.html'
+
+    def post(self, request):
+        form = UserRegistrationForm(data=request.POST)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect(reverse_lazy('accounts:signin'))
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['form'] = UserRegistrationForm()
+        return context
 
     def get_queryset(self):
         pass
 
 
 class SignInView(ListView):
-    """User authorization logic"""
+    """User login logic"""
     template_name = 'accounts/signin.html'
 
     def post(self, request):
@@ -40,6 +51,7 @@ class SignInView(ListView):
 
 
 class ProfileView(ListView):
+    """User personal profile view"""
     template_name = 'accounts/profile.html'
 
     def get_queryset(self):

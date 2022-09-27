@@ -9,19 +9,20 @@
     <div class="signup-container">
         <div class="signup-page">
             <p class="profile__title signup__title__style">Sign Up</p>
-            <form>
+            <form action="{% url 'accounts:signup' %}" method="POST">
+                {% csrf_token %}
                 <div class="registration-info">
                     <span class="signup_input">
-                        <input class="shadow__input" id="name__signup" type="text" placeholder="First name">
-                        <input class="shadow__input" id="surname__signup" type="text" placeholder="Last name">
+                        {{ form.first_name }}
+                        {{ form.last_name }}
                     </span>
                     <span class="signup_input">
-                        <input class="shadow__input" id="username__signup" type="text" placeholder="Username">
-                        <input class="shadow__input" id="email__signup" type="text" placeholder="Email">
+                        {{ form.username }}
+                        {{ form.email }}
                     </span>
                     <span class="signup_input">
-                        <input class="shadow__input" id="password__signup" type="text" placeholder="Enter your password">
-                        <input class="shadow__input" id="password__signup2" type="text" placeholder="Repeat your password">
+                        {{ form.password1 }}
+                        {{ form.password2 }}
                     </span>
                     <span>
                         <button class="signup__btn signup__btn__style" type="submit">Sign Up</button>
