@@ -4,11 +4,11 @@ from django.contrib import auth
 from django.shortcuts import HttpResponseRedirect
 from django.views.generic import ListView, CreateView
 
-from .forms import UserLoginForm
+from .forms import UserLoginForm, UserRegistrationForm
 
 
-class SignUpView(CreateView):
-    form = UserCreationForm()
+class SignUpView(ListView):
+    form = UserRegistrationForm
     success_url = reverse_lazy('login')
     template_name = 'accounts/signup.html'
 

@@ -417,13 +417,20 @@ input[type="text"], input[type="password"]{
     background-color: inherit;
     width: 300px;
     height: 55px;
-    margin-top: 86px;
     font-size: 20px;
     font-weight: 300;
     outline: none;
     color: #fff;
     padding-left: 5px;
     border: 3px solid #FFFFFF;
+}
+
+.input-margin {
+    margin-top: 86px;
+}
+
+.margin_bot {
+    margin-bottom: 15px;
 }
 
 
@@ -933,6 +940,8 @@ iframe {
 .registration-info {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    text-align: center;
 }
 
 .registration-info input[type="text"], input[type="password"]{
@@ -940,17 +949,32 @@ iframe {
     border-color: #817070;
 }
 
-.registration-info input[type="text"], input[type="password"]:hover {
+.registration-info input[type="text"]:hover, input[type="password"]:hover {
     border-color: #fff;
 }
 
-.registration-info input[type="text"], input[type="password"]:focus {
+.registration-info input[type="text"]:focus, input[type="password"]:focus {
     border-color: #fff;
 }
 
-.signup__btn__style {
-    margin-left: 60px;
+.signup__btn {
+    margin-top: 100px;
     border-radius: 0.5em;
+    width: 190px;
+    height: 55px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    /* identical to box height */
+    text-transform: uppercase;
+    color: #817070;
+    background: #FFFFFF;
+    border: 3px solid #FFFFFF;
+
+}
+
+.btn_margin_right {
+    margin-right: 250px;
 }
 
 .signup__title__style {
@@ -970,21 +994,24 @@ iframe {
     box-shadow: -1px 1px 14px 1px rgba(255,255,255,1)
 }
 
+.signup_input {
+    margin-top: 20px;
+}
+
 #name__signup {
-    margin-top: 50px;
-    margin-right: 0px;
+    margin-top: 0px;
 }
 
 #surname__signup {
-    margin-top: 20px;
+    margin-top: 0px;
 }
 
 #email__signup {
-    margin-top: 20px;
+    margin-top: 0px;
 }
 
 #password__signup {
-    margin-top: 20px;
+    margin-top: 0px;
 }
 
 /* signin page stylization */
@@ -1010,6 +1037,8 @@ iframe {
 .login-info {
     display: flex;
     flex-direction: column;
+    text-align: center;
+    width: 300px;
 }
 
 .login-info input[type="text"] {
@@ -1037,13 +1066,16 @@ iframe {
 
 .login__links {
     color: #fff;
-    margin-top: 25px;
+    margin-top: 10px;
+    margin-left: 73px;
+    width: 100%;
     display: flex;
     justify-content: center;
 }
 
 .login__link {
     margin-top: 5px;
+    margin-right: 150px;
     text-decoration: none;
     color: #C8C8C8;
 }

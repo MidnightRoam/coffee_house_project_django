@@ -1,5 +1,4 @@
 {% extends 'base.html' %}
-
 {% load static %}
 
 {% block title %}<title>Sign In</title>{% endblock %}
@@ -9,18 +8,16 @@
 {% block content %}
     <div class="signin-container">
         <div class="signin-page">
-            <p class="profile__title signin__title__style">Sign In</p>
+            <p class="profile__title signin__title__style margin_bot">Sign In</p>
             <form action="{% url 'accounts:signin' %}" method="post">
                 {% csrf_token %}
                 <div class="login-info">
-                    <span>
-                        {{ form.username }}
-                    </span>
-                    <span>
-                        {{ form.password }}
-                    </span>
+                    <span class="margin_bot">{{ form.username }}</span>
+                    <span>{{ form.password }}</span>
                     <a class="login__link" href="#">Forgot password?</a>
-                    <button class="profile__btn signup__btn__style">Sign In</button>
+                    <span>
+                        <button class="signup__btn">Sign In</button>
+                    </span>
                     <span class="login__links">
                         <p>Not a member? <a class="login__link" href="{% url 'accounts:signup' %}">Sign Up</a></p>
                     </span>

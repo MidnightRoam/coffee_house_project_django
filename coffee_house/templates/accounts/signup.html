@@ -2,20 +2,30 @@
 {% load static %}
 
 {% block title %}<title>Sign Up</title>{% endblock %}
+
 {% block custom_header %} {% endblock %}
+
 {% block content %}
     <div class="signup-container">
         <div class="signup-page">
             <p class="profile__title signup__title__style">Sign Up</p>
-            <form action="#" method="post">
-                {% csrf_token %}
-                {{ form.as_p }}
+            <form>
                 <div class="registration-info">
-                    <span><input class="signup_input" id="name__signup" type="text" placeholder="Enter your username"></span>
-                    <span><input id="surname__signup" type="text" placeholder="Enter your surname"></span>
-                    <span><input id="password__signup" type="text" placeholder="Enter your password"></span>
-                    <span><input id="email__signup" type="text" placeholder="Enter your email"></span>
-                    <button class="profile__btn signup__btn__style" type="submit">Sign Up</button>
+                    <span class="signup_input">
+                        <input class="shadow__input" id="name__signup" type="text" placeholder="First name">
+                        <input class="shadow__input" id="surname__signup" type="text" placeholder="Last name">
+                    </span>
+                    <span class="signup_input">
+                        <input class="shadow__input" id="username__signup" type="text" placeholder="Username">
+                        <input class="shadow__input" id="email__signup" type="text" placeholder="Email">
+                    </span>
+                    <span class="signup_input">
+                        <input class="shadow__input" id="password__signup" type="text" placeholder="Enter your password">
+                        <input class="shadow__input" id="password__signup2" type="text" placeholder="Repeat your password">
+                    </span>
+                    <span>
+                        <button class="signup__btn signup__btn__style" type="submit">Sign Up</button>
+                    </span>
                     <span class="login__links">
                         <p>Already a member? <a class="login__link" href="{% url 'accounts:signin' %}">Sign In</a></p>
                     </span>
