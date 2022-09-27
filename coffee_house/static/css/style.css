@@ -413,7 +413,7 @@ header {
     justify-content: center;
 }
 
-input[type="text"]{
+input[type="text"], input[type="password"]{
     background-color: inherit;
     width: 300px;
     height: 55px;
@@ -935,16 +935,16 @@ iframe {
     flex-direction: column;
 }
 
-.registration-info input[type="text"] {
+.registration-info input[type="text"], input[type="password"]{
     border-radius: 0.5em;
     border-color: #817070;
 }
 
-.registration-info input[type="text"]:hover {
+.registration-info input[type="text"], input[type="password"]:hover {
     border-color: #fff;
 }
 
-.registration-info input[type="text"]:focus {
+.registration-info input[type="text"], input[type="password"]:focus {
     border-color: #fff;
 }
 
@@ -956,6 +956,18 @@ iframe {
 .signup__title__style {
     border-bottom: 3px solid #fff;
     padding-bottom: 5px;
+}
+
+.shadow__input:hover {
+    -webkit-box-shadow: -1px 1px 14px 1px rgba(255,255,255,1);
+    -moz-box-shadow: -1px 1px 14px 1px rgba(255,255,255,1);
+    box-shadow: -1px 1px 14px 1px rgba(255,255,255,1)
+}
+
+.shadow__input:focus {
+    -webkit-box-shadow: -1px 1px 14px 1px rgba(255,255,255,1);
+    -moz-box-shadow: -1px 1px 14px 1px rgba(255,255,255,1);
+    box-shadow: -1px 1px 14px 1px rgba(255,255,255,1)
 }
 
 #name__signup {
