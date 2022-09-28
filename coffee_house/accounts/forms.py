@@ -7,7 +7,7 @@ from .models import User
 class UserLoginForm(AuthenticationForm):
     """User sign in form"""
     username = forms.CharField(widget=forms.TextInput(attrs={
-        "id": "email__signup",
+        "id": "email__auth",
         "placeholder": "Enter your username"
     }))
     password = forms.CharField(widget=forms.PasswordInput(attrs={
@@ -41,7 +41,7 @@ class UserRegistrationForm(UserCreationForm):
         "placeholder": "Username",
     }))
     email = forms.CharField(widget=forms.EmailInput(attrs={
-        "id": "email__signup",
+        "id": "email__auth",
         "placeholder": "Email",
     }))
     password1 = forms.CharField(widget=forms.PasswordInput(attrs={
@@ -96,3 +96,8 @@ class UserProfileForm(UserChangeForm):
     class Meta:
         model = User
         fields = ('username', 'first_name', 'last_name', 'email', 'age', 'sex', 'country', 'city', 'image')
+
+    def __init__(self, *args, **kwargs):
+        super(UserProfileForm, self).__init__(*args, **kwargs)
+        for field_name, field in self.fields.items():
+            field.widget.attrs['class'] = 'profile-fields'

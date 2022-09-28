@@ -1,13 +1,10 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %}<title>Profile</title>{% endblock %}
+{% block title %}<title>Profile Page</title>{% endblock %}
 
 {% block content %}
     <div class="profile-container">
         <div class="profile-background">
-<!--            <p class="profile__fullname">{% if user %} {{ user }} {% elif not user %} John Doe {% endif %}</p>-->
-<!--            {% if user %}<p class="user__joined">Joined: {{ user.date_joined }}</p> {% endif %}-->
-<!--            <p class="profile__title">Contact</p>-->
             <img
                 src="{% if user.image %} {{ user.image.url }} {% else %} {% static 'image/users/user_default_avatar.png' %} {% endif %}"
                 alt="Avatar"
@@ -18,33 +15,23 @@
                     <div class="image__input">
                         {{ form.image }}
                     </div>
-<!--                    <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">Button</button>-->
-<!--                <input type="file" placeholder="Take a picture" alt="Avatar" size="50">-->
                 <p class="profile__fullname">{{ user }}</p>
-                {% if user %}<p class="user__joined">Joined: {{ user.date_joined }}</p> {% endif %}
+                <p class="user__joined">Joined: {{ user.date_joined }}</p>
                 <p class="profile__title">Contact</p>
-                <div class="full__name">
-<!--                    <span><input id="profile__name" type="text" placeholder="{% if user.first_name %} First name: {{ user.first_name }} {% else %} Name {% endif %}"></span>-->
-<!--                    <span><input id="profile__surname" type="text" placeholder="{% if user.last_name %} Last name: {{ user.last_name }} {% else %} Last name {% endif %}"></span>-->
-
+                <div class="fullname__input">
                     {{ form.first_name }}
                     {{ form.last_name }}
                 </div>
                 <div class="profile__contact">
                     <div class="email__input">
-<!--                        <span><input id="email__input" type="text" placeholder="{% if user.email %} Email: {{ user.email }} {% else %} Email {% endif %}"></span>-->
                         {{ form.email }}
                     </div>
                     <p class="profile__title" id="general__title">General</p>
                     <div class="born__information">
-<!--                        <span><input id="born__input" type="text" placeholder="{% if user.age %} Age: {{ user.age }} {% else %} Age {% endif %}"></span>-->
-<!--                        <span><input id="sex__input" type="text" placeholder="{% if user.sex %} Sex: {{ user.sex }} {% else %} Sex {% endif %}"></span>-->
                         {{ form.age }}
                         {{ form.sex }}
                     </div>
                     <div class="location__information">
-<!--                        <span><input id="country__input" type="text" placeholder="{% if user.country %} County: {{ user.country }} {% else %} County {% endif %}"></span>-->
-<!--                        <span><input id="city__input" type="text" placeholder="{% if user.city %} City: {{ user.city }} {% else %} City {% endif %}"></span>-->
                         {{ form.country }}
                         {{ form.city }}
                     </div>

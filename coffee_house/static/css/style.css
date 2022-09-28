@@ -885,10 +885,6 @@ iframe {
     border: 3px solid #817070;
 }
 
-.profile__input.input[type="text"] {
-    border-color: black;
-}
-
 .email-field__input:hover {
     cursor: not-allowed;
 
@@ -901,6 +897,9 @@ iframe {
     font-weight: 200;
 }
 
+.profile-fields:focus: red;
+}
+
 #profile__surname {
     margin-left: 5px;
 }
@@ -908,10 +907,15 @@ iframe {
 #email__input {
     width: 609px;
     margin-top: 10px;
+    cursor: not-allowed;
 }
 
 #profile__name, #profile__surname {
     margin-top: 25px;
+}
+
+#profile__surname {
+    margin-left: 5px;
 }
 
 #city__input, #country__input {
@@ -924,6 +928,24 @@ iframe {
 
 #born__input, #sex__input {
     margin-top: 25px;
+}
+
+#profile__name, #profile__surname, #city__input,
+#country__input, #sex__input, #city__input,
+#born__input, #sex__input, #email__input, #age__input {
+    border-color: #817070;
+}
+
+#profile__name:hover, #profile__surname:hover, #city__input:hover,
+#country__input:hover, #sex__input:hover, #city__input:hover,
+#born__input:hover, #sex__input:hover, #age__input:hover {
+    border-color: #fff;
+}
+
+#profile__name:focus, #profile__surname:focus, #city__input:focus,
+#country__input:focus, #sex__input:focus, #city__input:focus,
+#born__input:focus, #sex__input:focus, #age__input:focus {
+    border-color: #fff;
 }
 
 /* signup page stylization */
@@ -953,16 +975,16 @@ iframe {
     text-align: center;
 }
 
-.registration-info input[type="text"], input[type="password"], input[type="email"] {
+.registration-info input[type="text"], input[type="password"] {
     border-radius: 0.5em;
     border-color: #817070;
 }
 
-.registration-info input[type="text"]:hover, input[type="password"]:hover, input[type="email"]:hover {
+.registration-info input[type="text"]:hover, input[type="password"]:hover {
     border-color: #fff;
 }
 
-.registration-info input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus {
+.registration-info input[type="text"]:focus, input[type="password"]:focus {
     border-color: #fff;
 }
 
@@ -1028,8 +1050,18 @@ iframe {
     margin-top: 0px;
 }
 
-#email__signup {
+#email__auth {
     margin-top: 0px;
+    border-radius: 0.5em;
+    border-color: #817070;
+}
+
+#email__auth:hover {
+    border-color: #fff;
+}
+
+#email__auth:focus {
+    border-color: #fff;
 }
 
 #password__signup {
