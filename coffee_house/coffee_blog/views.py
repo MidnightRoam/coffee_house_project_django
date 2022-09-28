@@ -5,7 +5,7 @@ from coffee_blog.models import Blog, Order
 
 
 class IndexView(ListView):
-    template_name = 'index.html'
+    template_name = 'pages/index.html'
     context_object_name = 'blogs'
 
     def get_queryset(self):
@@ -13,7 +13,7 @@ class IndexView(ListView):
 
 
 class OrderView(ListView):
-    template_name = 'order.html'
+    template_name = 'pages/order.html'
     model = Order
     context_object_name = 'products'
 
@@ -28,7 +28,7 @@ class OrderView(ListView):
 
 class BlogDetailView(DetailView):
     model = Blog
-    template_name = 'personal_page.html'
+    template_name = 'pages/personal_page.html'
     slug_url_kwarg = 'blog_slug'
     context_object_name = 'post_blogs'
 
@@ -39,7 +39,7 @@ class BlogDetailView(DetailView):
 
 
 class NotFoundPageView(ListView):
-    template_name = 'page_404.html'
+    template_name = 'pages/page_404.html'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
