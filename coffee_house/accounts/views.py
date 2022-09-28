@@ -1,10 +1,11 @@
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
 from django.urls import reverse_lazy, reverse
 from django.contrib import auth
-from django.shortcuts import HttpResponseRedirect
+from django.shortcuts import HttpResponseRedirect, render
 from django.views.generic import ListView, CreateView
 
-from .forms import UserLoginForm, UserRegistrationForm
+from .forms import UserLoginForm, UserRegistrationForm, UserProfileForm
 
 
 class SignUpView(ListView):
@@ -50,9 +51,30 @@ class SignInView(ListView):
         pass
 
 
-class ProfileView(ListView):
-    """User personal profile view"""
-    template_name = 'accounts/profile.html'
+# class ProfileView(ListView):
+#     """User personal profile view"""
+#     template_name = 'accounts/profile.html'
+#
+#     def get(self, request):
+#         return UserProfileForm(instance=request.user)
+#
+#     def get_context_data(self, **kwargs):
+#         context = super().get_context_data(**kwargs)
+#         context['form'] = UserProfileForm()
+#         return context
+#
+#     def get_queryset(self):
+#         pass
 
-    def get_queryset(self):
-        pass
+
+@login_required(login_url='/accounts/signin')
+def profile(request):
+    if request.method == "POST":
+        form = UserProfileForm(data=request.POST, files=request.FILES, instance=request.user)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect(reverse('accounts:profile-view'))
+    else:
+        form = UserProfileForm(instance=request.user)
+    context = {'form': form}
+    return render(request, 'accounts/profile.html', context)

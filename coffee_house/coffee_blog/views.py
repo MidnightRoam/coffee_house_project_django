@@ -37,3 +37,16 @@ class BlogDetailView(DetailView):
         context['title'] = "Blog Page"
         return context
 
+
+class NotFoundPageView(ListView):
+    template_name = 'page_404.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = "Not Found 404"
+        return context
+
+    def get_queryset(self):
+        pass
+
+

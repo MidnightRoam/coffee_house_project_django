@@ -30,6 +30,7 @@ class UserRegistrationForm(UserCreationForm):
     first_name = forms.CharField(widget=forms.TextInput(attrs={
         "id": "name__signup",
         "placeholder": "First name",
+        'class': 'block'
     }))
     last_name = forms.CharField(widget=forms.TextInput(attrs={
         "id": "surname__signup",
@@ -60,3 +61,38 @@ class UserRegistrationForm(UserCreationForm):
         super(UserRegistrationForm, self).__init__(*args, **kwargs)
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'shadow__input'
+
+
+class UserProfileForm(UserChangeForm):
+    """User profile change form"""
+    username = forms.CharField(widget=forms.TextInput(attrs={
+        'readonly': True,
+        'id': 'profile__name'
+    }))
+    email = forms.CharField(widget=forms.EmailInput(attrs={
+        'readonly': True,
+        'id': 'email__input'
+    }))
+    image = forms.ImageField(widget=forms.FileInput(), required=False)
+    first_name = forms.CharField(widget=forms.TextInput(attrs={
+        'id': "profile__name",
+    }))
+    last_name = forms.CharField(widget=forms.TextInput(attrs={
+        'id': "profile__surname"
+    }))
+    age = forms.CharField(widget=forms.TextInput(attrs={
+        'id': "age__input"
+    }))
+    sex = forms.CharField(widget=forms.TextInput(attrs={
+        'id': "sex__input"
+    }))
+    country = forms.CharField(widget=forms.TextInput(attrs={
+        'id': "country__input"
+    }))
+    city = forms.CharField(widget=forms.TextInput(attrs={
+        'id': "city__input"
+    }))
+
+    class Meta:
+        model = User
+        fields = ('username', 'first_name', 'last_name', 'email', 'age', 'sex', 'country', 'city', 'image')

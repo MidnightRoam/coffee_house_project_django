@@ -7,15 +7,18 @@
     font-style: normal;
 }
 
+.block {
+    display: block;
+}
 /* homepage styles */
-.container, header {
+.container {
     max-width: 1920px;
     height: 700px;
     background: #fff;
 }
 
-header {
-    display: flex;
+header, .header {
+    width: 100%;
     justify-content: center;
     flex-direction: row;
 }
@@ -56,7 +59,7 @@ header {
     height: 10px;
     left: 900px;
     top: 362px;
-    background: #817070;
+    background: #fff;
     margin-top: 250px;
     margin-bottom: 292px;
 }
@@ -67,21 +70,19 @@ header {
     height: 89px;
     left: 735px;
     top: 266px;
-    padding-top: 250px;
+    padding-top: 260px;
     font-style: normal;
     font-weight: 700;
     font-size: 60px;
     line-height: 89px;
     /* identical to box height */
     text-align: center;
-    text-transform: uppercase;
-    color: #FFFFFF;
+    color: #fff;
 }
 
 .story {
     width: 1905px;
     height: 632px;
-
 }
 
 .story__title {
@@ -422,7 +423,7 @@ input[type="text"], input[type="password"], input[type="email"]{
     outline: none;
     color: #fff;
     padding-left: 5px;
-    border: 3px solid #FFFFFF;
+    border: 3px solid #fff;
 }
 
 .input-margin {
@@ -857,8 +858,7 @@ iframe {
     margin-left: 218px;
     width: 180px;
     height: 170px;
-    border: 3px solid #6F4E37;
-    border-radius: 1em;
+    border-radius: 0.5em;
 }
 
 .profile__btn {
@@ -883,6 +883,15 @@ iframe {
 
 .profile__btn:active {
     border: 3px solid #817070;
+}
+
+.profile__input.input[type="text"] {
+    border-color: black;
+}
+
+.email-field__input:hover {
+    cursor: not-allowed;
+
 }
 
 .user__joined {
@@ -944,7 +953,7 @@ iframe {
     text-align: center;
 }
 
-.registration-info input[type="text"], input[type="password"], input[type="email"]{
+.registration-info input[type="text"], input[type="password"], input[type="email"] {
     border-radius: 0.5em;
     border-color: #817070;
 }
@@ -996,6 +1005,19 @@ iframe {
 
 .signup_input {
     margin-top: 20px;
+}
+
+.error_messages {
+    margin-left: 25px;
+    padding: 5px 15px 10px 15px;
+    background: #fbc4ab;
+    height: 250px;
+    width: 200px;
+    border-radius: 0.5em;
+}
+
+.cross {
+    margin-left: 165px;
 }
 
 #name__signup {
@@ -1082,4 +1104,37 @@ iframe {
 
 .login__link:hover {
     text-decoration: underline;
+}
+
+/* Not found (404) page stylization */
+.not-found__page {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 970px;
+    background: #fff;
+}
+
+.not-found__upper-title {
+    margin-bottom: 250px;
+    font-size: 40px;
+    font-weight: 300;
+}
+
+.not-found__title {
+    margin-bottom: 400px;
+    font-size: 500px;
+    color: black;
+    font-weight: 500;
+    line-height: 53px;
+    text-transform: uppercase;
+}
+
+/* File button form style */
+.image__input {
+    margin-left: 35px;
+    display: flex;
+    justify-content: center;
+    color: #fff;
 }

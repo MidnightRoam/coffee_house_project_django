@@ -5,7 +5,6 @@
 
 {% block content %}
     <div class="container">
-        <p>Page views: {{ num_visits }}</p>
         <div class="main">
             <div class="home">
                 <div class="home__image"></div>
@@ -28,16 +27,6 @@
                         <div class="card__date">Created: {{ post.created_at }}</div>
                     </div>
                     {% endfor %}
-<!--                    <div class="blog__card">-->
-<!--                        <p class="card__title"><a href="{{ blog.get_absolute_url }}" class="card__link">Dutch Coffee Chains</a></p>-->
-<!--                        <div class="card__image"><img src="https://source.unsplash.com/TYIzeCiZ_60/1920x1080" alt=""></div>-->
-<!--                        <div class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean varius eget arcu quis cursus. Nunc id tortor imperdiet, vestibulum orci sed, gravida orci. Cras a enim ac elit eleifend euismod.</div>-->
-<!--                    </div>-->
-<!--                    <div class="blog__card card-right">-->
-<!--                        <p class="card__title"><a href="{{ blog.get_absolute_url }}" class="card__link">Start Up In Minneapolis</a></p>-->
-<!--                        <div class="card__image"><img src="https://source.unsplash.com/9rTEwV_G0Do/1920x1080" alt=""></div>-->
-<!--                        <div class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean varius eget arcu quis cursus. Nunc id tortor imperdiet, vestibulum orci sed, gravida orci. Cras a enim ac elit eleifend euismod.</div>-->
-<!--                    </div>-->
                 </div>
             </div>
             <div class="contact">
