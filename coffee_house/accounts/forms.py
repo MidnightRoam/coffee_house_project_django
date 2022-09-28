@@ -82,16 +82,16 @@ class UserProfileForm(UserChangeForm):
     }))
     age = forms.CharField(widget=forms.TextInput(attrs={
         'id': "age__input"
-    }))
+    }), required=False)
     sex = forms.CharField(widget=forms.TextInput(attrs={
         'id': "sex__input"
-    }))
+    }), required=False)
     country = forms.CharField(widget=forms.TextInput(attrs={
         'id': "country__input"
-    }))
+    }), required=False)
     city = forms.CharField(widget=forms.TextInput(attrs={
         'id': "city__input"
-    }))
+    }), required=False)
 
     class Meta:
         model = User
