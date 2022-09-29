@@ -55,6 +55,7 @@ class BlogPostsView(ListView):
     template_name = 'pages/blog_posts.html'
     model = Blog
     context_object_name = 'posts'
+    paginate_by = 6
 
     def get_queryset(self):
         return Blog.objects.filter(is_published=True)

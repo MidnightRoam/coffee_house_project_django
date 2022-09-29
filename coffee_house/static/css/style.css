@@ -668,8 +668,14 @@ footer {
 }
 
 /* Personal blog page styles */
+.personal-page-container {
+    height: 2000px;
+    background: #fff;
+}
+
 .blog__page {
-    height: 1500px;
+    margin: 100px;
+    border-radius: 1em;
     background: #EFEFEF;
     display: flex;
     flex-direction: column;
@@ -733,15 +739,12 @@ footer {
     text-decoration: none;
     background: #937171;
     color: #543636;
+    border-color: #817070;
+    border-radius: 0.5em;
 }
 
 .btn__blog:hover {
     color: #fff;
-}
-
-iframe {
-    padding-top: 50px;
-    width: 25%;
 }
 
 /* Style all font awesome icons */
@@ -1187,7 +1190,7 @@ iframe {
 
 /* Blog posts page styles */
 .posts-container {
-    height: 2500px;
+    height: 2200px;
     background: #fff;
 }
 
@@ -1198,6 +1201,7 @@ iframe {
     flex-wrap: wrap;
     background: #EFEFEF;
     margin: 80px 200px 100px 200px;
+    padding-bottom: 50px;
     border-radius: 1em;
 }
 
@@ -1220,4 +1224,28 @@ iframe {
     margin-left: 476px;
     margin-right: 476px;
     border-radius: 0.5em;
+}
+
+/* Pagination section style */
+
+.pagination-link {
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    font-size: 20px;
+    margin: 5px;
+    padding: 1px 10px 1px 10px;
+}
+
+.pagination-link:hover {
+    color: #937171;
+}
+
+.disabled {
+    pointer-events: none;
+    opacity: 0.3;
+}
+
+.page-num-selected {
+    color: #BC8F66;
 }
