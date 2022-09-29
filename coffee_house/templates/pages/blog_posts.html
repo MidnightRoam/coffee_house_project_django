@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}<title>Blog Posts Page</title>{% endblock %}
+
+
+{% block content %}
+    <div class="posts-container">
+        <div class="post-body">
+            <p class="blog_post__title">Available Posts</p>
+            <div class="post-container">
+                {% for post in posts %}
+                <div class="blog__card post__card">
+                    <p class="card__title"><a href="/blog/{{ post.slug }}" class="card__link">{{ post.title }}</a></p>
+                    <div class="card__image"><img src="{{ post.image.url }}" alt="image"></div>
+                    <div class="card__text">{{ post.short_description }}.</div>
+                    <div class="card__date">Created: {{ post.created_at }}</div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

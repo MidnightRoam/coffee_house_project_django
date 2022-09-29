@@ -50,3 +50,11 @@ class NotFoundPageView(ListView):
         pass
 
 
+class BlogPostsView(ListView):
+    """Blog posts page view"""
+    template_name = 'pages/blog_posts.html'
+    model = Blog
+    context_object_name = 'posts'
+
+    def get_queryset(self):
+        return Blog.objects.filter(is_published=True)

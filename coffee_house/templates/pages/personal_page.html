@@ -12,7 +12,7 @@
       <div class="personal__text">{{ object.text|safe }}</div>
       <p class="personal__date">Post created: {{ object.created_at }}</p>
       <p class="personal__date">Post updated: {{ object.updated_at }}</p>
-      <a href="{% url 'index-view' %}" class="btn btn__blog">back to home</a>
+      <a href="{% url 'blog-posts' %}" class="btn btn__blog">back to posts</a>
     </div>
   </div>
 {% endblock %}

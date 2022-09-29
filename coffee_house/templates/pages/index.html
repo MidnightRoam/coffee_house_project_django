@@ -21,7 +21,7 @@
                 <div class="card__container">
                     {% for post in blogs %}
                     <div class="blog__card card-left">
-                        <p class="card__title"><a href="{{ post.slug }}" class="card__link">{{ post.title }}</a></p>
+                        <p class="card__title"><a href="/blog/{{ post.slug }}" class="card__link">{{ post.title }}</a></p>
                         <div class="card__image"><img src="{{ post.image.url }}" alt="image"></div>
                         <div class="card__text">{{ post.short_description }}.</div>
                         <div class="card__date">Created: {{ post.created_at }}</div>
