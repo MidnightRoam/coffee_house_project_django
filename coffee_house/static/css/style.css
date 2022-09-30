@@ -165,11 +165,12 @@ header, .header {
     width: 365px;
     height: 484px;
     background: #FFFFFF;
+    border-bottom: 3px solid #675a5a;
 }
 
 .blog__card:hover {
     box-sizing: border-box;
-    border: 3px solid rgba(114, 107, 99, 0.986);
+    border-bottom: 10px solid #675a5a;
 }
 
 .card__container {
@@ -1236,4 +1237,51 @@ footer {
 
 .page-num-selected {
     color: #BC8F66;
+}
+
+/* Story page styles */
+.story-page__container {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.story-page-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f0f0f0;
+    height: 1400px;
+    width: 1000px;
+    border-radius: 1.5em;
+}
+
+.story-page__title {
+    display: flex;
+    font-size: 44px;
+    font-weight: 500;
+    padding: 20px;
+    border-radius: 0.5em;
+}
+
+.story-page__text{
+    width: 650px;
+    height: auto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 30px;
+    color: #333;
+    text-align: justify;
+    padding: 20px;
+    border-radius: 1.5em;
+}
+
+.story-page__img {
+    width: 650px;
+    height: 450px;
+    border-radius: 1.5em;
+    margin-bottom: 25px;
 }

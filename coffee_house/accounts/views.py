@@ -55,8 +55,16 @@ class SignInView(ListView):
 #     """User personal profile view"""
 #     template_name = 'accounts/profile.html'
 #
-#     def get(self, request):
-#         return UserProfileForm(instance=request.user)
+#     def post(self, request):
+#         form = UserProfileForm(data=request.POST, files=request.FILES, instance=request.user)
+#
+#         if form.is_valid():
+#             form.save()
+#             return HttpResponseRedirect(reverse('accounts:profile-view'))
+#
+#     # def get(self, request):
+#     #     form = UserProfileForm(instance=request.user)
+#     #     return form
 #
 #     def get_context_data(self, **kwargs):
 #         context = super().get_context_data(**kwargs)

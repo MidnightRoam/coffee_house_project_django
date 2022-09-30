@@ -1,10 +1,11 @@
 from django.shortcuts import render, get_object_or_404
-from django.views.generic import DetailView, ListView
+from django.views.generic import DetailView, ListView, TemplateView
 
 from coffee_blog.models import Blog, Order
 
 
 class IndexView(ListView):
+    """Home page view"""
     template_name = 'pages/index.html'
     context_object_name = 'blogs'
 
@@ -13,6 +14,7 @@ class IndexView(ListView):
 
 
 class OrderView(ListView):
+    """Order page view"""
     template_name = 'pages/order.html'
     model = Order
     context_object_name = 'products'
@@ -27,6 +29,7 @@ class OrderView(ListView):
 
 
 class BlogDetailView(DetailView):
+    """Personal page of blog view"""
     model = Blog
     template_name = 'pages/personal_page.html'
     slug_url_kwarg = 'blog_slug'
@@ -38,18 +41,6 @@ class BlogDetailView(DetailView):
         return context
 
 
-class NotFoundPageView(ListView):
-    template_name = 'pages/page_404.html'
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['title'] = "Not Found 404"
-        return context
-
-    def get_queryset(self):
-        pass
-
-
 class BlogPostsView(ListView):
     """Blog posts page view"""
     template_name = 'pages/blog_posts.html'
@@ -59,3 +50,14 @@ class BlogPostsView(ListView):
 
     def get_queryset(self):
         return Blog.objects.filter(is_published=True)
+
+
+class NotFoundPageView(TemplateView):
+    """404 page view"""
+    template_name = 'pages/page_404.html'
+
+
+class StoryView(TemplateView):
+    """Story page view"""
+    template_name = 'pages/story_page.html'
+
