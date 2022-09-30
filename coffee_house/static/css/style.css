@@ -14,6 +14,7 @@
 
 .block {
     display: block;
+    position: relative;
 }
 
 .transition:hover {
@@ -22,20 +23,21 @@
 }
 /* homepage styles */
 .container {
-    width: 1905px;
-    height: 700px;
+    width: auto;
+    height: auto;
     background: #fff;
 }
 
 header, .header {
-    width: 1905px;
+    width: auto;
+    display: flex;
     justify-content: center;
     flex-direction: row;
 }
 
 .logo {
     text-decoration: none;
-    color: black;
+    color: #333;
     width: 450px;
     height: 53px;
     padding-right: 80px;
@@ -51,13 +53,13 @@ header, .header {
     flex-direction: column;
 }
 
-.home {
-    width: 1905px;
-    height: 812px;
+.home__image {
+    display: flex;
+    justify-content: center;
 }
 
 .home__image {
-    width: 1905px;
+    width: auto;
     height: 730px;
     display: flex;
     align-items: center;
@@ -68,11 +70,8 @@ header, .header {
 }
 
 .home__title {
-    position: absolute;
-    width: 399px;
-    height: 89px;
-    left: 735px;
-    top: 266px;
+    width: auto;
+    height: auto;
     padding-top: 260px;
     font-style: normal;
     font-weight: 700;
@@ -83,84 +82,82 @@ header, .header {
     color: #fff;
 }
 
-.line {
-    position: absolute;
-    width: 80px;
-    height: 10px;
-    left: 900px;
-    top: 362px;
-    background: #fff;
-    margin-top: 250px;
-    margin-bottom: 292px;
+.border-bot {
+    border-bottom: 10px solid #817070;
+    border-width; 50%;
 }
 
 .story {
-    width: 1905px;
-    height: 632px;
+    width: auto;
+    height: 500px;
+    display: flex;
+    justify-content: center;
 }
 
 .story__title {
-    width: 91px;
+    margin: 20px 0px 20px 0px;
+    width: auto;
     height: 53px;
     font-style: normal;
     font-weight: 500;
     font-size: 36px;
     line-height: 53px;
-    text-align: center;
     text-transform: uppercase;
-    color: #000000;
-    padding-right: 915px;
-    padding-left: 915px;
+    color: #333;
 }
 
 .story__image {
-    width: 600px;
-    height: 400px;
-    background: url('https://source.unsplash.com/X4RJG4aNi8o/1920x1080');
+    width: 550px;
+    height: 350px;
     background-position: center;
     background-size: cover;
     margin-top: 60px;
-    margin-left: 295px;
-    margin-right: 100px;
     margin-bottom: 59px;
+    margin-left: 100px;
     border-radius: 1em;
 }
 
 .story__text {
     width: 650px;
-    height: 180px;
+    height: auto;
     font-style: normal;
     font-weight: 300;
     font-size: 20px;
     line-height: 30px;
-    color: #000000;
-    padding-top: 80px;
-    padding-left: 40px;
-    padding-right: 123px;
+    color: #333;
+    padding: 80px 100px 0px 0px;
     text-align: justify;
 }
 
 .blog {
-    width: 1905px;
-    height: 711px;
+    width: auto;
+    height: auto;
     background: #EFEFEF;
-    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 90px;
+    padding-top: 15px;
 }
 
 .blog__title {
-    width: 76px;
-    height: 53px;
+    padding-bottom: 15px;
     font-style: normal;
     font-weight: 500;
     font-size: 36px;
     line-height: 53px;
     text-align: center;
     text-transform: uppercase;
-    color: #000000;
-    padding-top: 50px;
-    padding-left: 915px;
-    padding-right: 915px;
-    padding-bottom: 90px;
+}
+
+.blog__link {
+    color: #333;
+    text-decoration: none;
+}
+
+.blog__link:hover {
+    color: rgb(133, 80, 12)
 }
 
 .blog__card {
@@ -176,9 +173,8 @@ header, .header {
 }
 
 .card__container {
-    margin-left: 200px;
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .card__title {
@@ -203,7 +199,7 @@ header, .header {
 
 .card__link {
     text-decoration: none;
-    color: #000000;
+    color: #333;
 }
 
 .card__link:hover {
@@ -232,7 +228,7 @@ header, .header {
     font-weight: 300;
     font-size: 18px;
     line-height: 27px;
-    color: #000000;
+    color: #333;
     padding: 0px 20px 46px 20px;
     text-align: justify;
 }
@@ -250,7 +246,11 @@ header, .header {
 }
 
 .contact {
-    width: 1905px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
     height: 337px;
     background: #817070;
 }
@@ -264,8 +264,8 @@ header, .header {
     line-height: 53px;
     text-align: center;
     text-transform: uppercase;
-    color: #FFFFFF;
-    padding: 60px 900px 0px 867px;
+    color: #fff;
+    padding: 60px 0px 0px 0px;
 }
 
 .contact__field {
@@ -284,7 +284,6 @@ header, .header {
     border: 3px solid #FFFFFF;
     background: transparent !important;
     outline: 0;
-    margin-right: 35px;
 }
 
 .contact__field::placeholder {
@@ -298,7 +297,7 @@ header, .header {
     font-size: 20px;
     line-height: 30px;
     /* identical to box height */
-    color: #FFFFFF;
+    color: #fff;
 }
 
 .contact__button {
@@ -319,7 +318,7 @@ header, .header {
     height: 55px;
     background: #FFFFFF;
     border: 3px solid #FFFFFF;
-    margin: 28px 800px 58px 880px;
+    margin: 28px 0px 58px 0px;
     cursor: pointer;
 }
 
@@ -341,7 +340,7 @@ header, .header {
     /* identical to box height */
     text-align: center;
     text-transform: uppercase;
-    color: #000000;
+    color: #333;
     padding: 29px 815px 14px 800px;
 }
 
@@ -349,8 +348,9 @@ header, .header {
     float: left;
  }
 
- .card-left {
-     margin-right: 200px;
+ .mg-50 {
+     margin-left: 50px;
+     margin-right: 50px;
  }
 
  .card-right {
@@ -361,7 +361,7 @@ header, .header {
 .nav__home {
     position: fixed;
     background: #fff;
-    width:  1905px;
+    width:  100%;
     height: 110px;
     display: flex;
     justify-content: space-between;
@@ -376,7 +376,7 @@ header, .header {
     justify-content: center;
     align-items: center;
     height: 110px;
-    background: #FFFFFF;
+    background: #fff;
 }
 
 .menu__order {
@@ -400,7 +400,7 @@ header, .header {
     text-align: center;
     text-transform: uppercase;
     text-decoration: none;
-    color: #000000;
+    color: #333;
     margin-left: 46px;
 }
 
@@ -453,7 +453,7 @@ input[type="text"], input[type="password"], input[type="email"]{
 input[type="number"] {
     width: 130px;
     height: 55px;
-    border: 3px solid #FFFFFF;
+    border: 3px solid #fff;
     background-color: inherit;
     color: #fff;
     font-style: normal;
@@ -477,13 +477,11 @@ input::placeholder {
     height: 30px;
     text-align: center;
     font-family: 'Oswald', sans-serif;
-
     font-weight: 300;
     font-size: 20px;
     line-height: 30px;
     /* identical to box height */
-
-    color: #FFFFFF;
+    color: #fff;
 }
 
 .checkbox {
@@ -578,7 +576,7 @@ input::placeholder {
     font-size: 20px;
     line-height: 30px;
     /* identical to box height */
-    color: #FFFFFF;
+    color: #fff;
     padding-top: 39px;
     padding-bottom: 52px;
 }
@@ -593,8 +591,8 @@ input::placeholder {
     text-transform: uppercase;
     color: #817070;
     margin-bottom: 35px;
-    background: #FFFFFF;
-    border: 3px solid #FFFFFF;
+    background: #fff;
+    border: 3px solid #fff;
 }
 
 .btn:hover {
@@ -607,7 +605,7 @@ input::placeholder {
 }
 
 footer {
-    width: 100%;
+    width: auto;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -634,10 +632,9 @@ footer {
 
 .footer__logo {
     text-decoration: none;
-    color: black;
+    color: #333;
     width: 100px;
     height: 53px;
-
     font-weight: 500;
     font-size: 22px;
     line-height: 53px;
@@ -669,7 +666,7 @@ footer {
 
 /* Personal blog page styles */
 .personal-page-container {
-    height: 2000px;
+    height: auto;
     background: #fff;
 }
 
@@ -685,8 +682,7 @@ footer {
 .personal__title {
     color: #353839;
     height: 80px;
-    width: 1905px;
-    /*padding: 55px 0px 15px 0px;*/
+    width: auto;
     font-style: normal;
     font-weight: 500;
     font-size: 44px;
@@ -700,7 +696,6 @@ footer {
 .blog__image {
     background-position: center;
     background-size: cover;
-    /*padding: 150px 690px 20px 690px;*/
     width: 813px;
     height: 500px;
     border-radius: 1em;
@@ -708,8 +703,8 @@ footer {
 }
 
 .personal__text {
-    color: black;
-    width: 43%;
+    color: #333;
+    width: 50%;
     padding-top: 55px;
     padding-bottom: 55px;
     font-style: normal;
@@ -722,7 +717,7 @@ footer {
 
 .personal__date {
     color: grey;
-    width: 45%;
+    width: 50%;
     font-style: normal;
     font-weight: 200;
     font-size: 24px;
@@ -765,13 +760,9 @@ footer {
   border-radius: 50%;
 }
 
-
-/* Add a hover effect if you want */
 .fa:hover {
   opacity: 0.7;
 }
-
-/* Set a specific color for each brand */
 
 /* Facebook */
 .fa-facebook {
@@ -823,8 +814,7 @@ footer {
 .fa-instagram:hover {
     background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
     -webkit-background-clip: text;
-          /* Also define standard property for compatibility */
-          background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     border-color: #C13584;
 }
@@ -889,8 +879,8 @@ footer {
     color: #817070;
     margin-top: 35px;
     margin-left: 210px;
-    background: #FFFFFF;
-    border: 3px solid #FFFFFF;
+    background: #fff;
+    border: 3px solid #fff;
 }
 
 .profile__btn:hover {
@@ -912,9 +902,6 @@ footer {
     color: #fff;
     font-size: 18px;
     font-weight: 200;
-}
-
-.profile-fields:focus: red;
 }
 
 #profile__surname {
@@ -976,7 +963,7 @@ footer {
 }
 
 .signup-page {
-    height: 600px;
+    height: auto;
     padding: 45px;
     border-radius: 0.5em;
     background: #675a5a;
@@ -1016,8 +1003,8 @@ footer {
     /* identical to box height */
     text-transform: uppercase;
     color: #817070;
-    background: #FFFFFF;
-    border: 3px solid #FFFFFF;
+    background: #fff;
+    border: 3px solid #fff;
 
 }
 
@@ -1161,12 +1148,13 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 970px;
+    height: auto;
     background: #fff;
 }
 
 .not-found__upper-title {
     margin-bottom: 250px;
+    margin-top: 30px;
     font-size: 40px;
     font-weight: 300;
 }
@@ -1174,7 +1162,7 @@ footer {
 .not-found__title {
     margin-bottom: 400px;
     font-size: 500px;
-    color: black;
+    color: #333;
     font-weight: 500;
     line-height: 53px;
     text-transform: uppercase;
@@ -1190,7 +1178,7 @@ footer {
 
 /* Blog posts page styles */
 .posts-container {
-    height: 2200px;
+    height: auto;
     background: #fff;
 }
 
@@ -1231,7 +1219,7 @@ footer {
 .pagination-link {
     text-decoration: none;
     text-align: center;
-    color: black;
+    color: #333;
     font-size: 20px;
     margin: 5px;
     padding: 1px 10px 1px 10px;

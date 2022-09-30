@@ -7,25 +7,36 @@
     <div class="container">
         <div class="main">
             <div class="home">
-                <div class="home__image"></div>
-                <p class="home__title">TAKE YOUR TIME</p>
-                <div class="line"></div>
+                <div class="home__image">
+                    <p class="home__title border-bot">TAKE YOUR TIME</p>
+                </div>
             </div>
             <div class="story">
-                <p class="story__title" id="story">STORY</p>
-                <div class="story__image text-image-left"></div>
-                <div class="story__text text-image-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean varius eget arcu quis cursus. Nunc id tortor imperdiet, vestibulum orci sed, gravida orci. Cras a enim ac elit eleifend euismod. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent mattis ultrices est, congue ullamcorper erat bibendum pulvinar. In accumsan dapibus accumsan. Maecenas semper est ut nunc feugiat, vel ultrices ligula commodo. Donec eget pulvinar nunc, eget pharetra risus.</div>
+                <span class="story__title"><a href="#" class="blog__link">STORY</a>
+                    <img src="https://source.unsplash.com/X4RJG4aNi8o/1920x1080" class="story__image text-image-left" alt="">
+                </span>
+                <div class="story__text text-image-left">
+                    Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit. Aenean varius eget arcu quis cursus.
+                    Nunc id tortor imperdiet, vestibulum orci sed, gravida orci.
+                    Cras a enim ac elit eleifend euismod. Class aptent taciti sociosqu ad
+                    litora torquent per conubia nostra, per inceptos himenaeos.
+                    Praesent mattis ultrices est, congue ullamcorper erat bibendum
+                    pulvinar. In accumsan dapibus accumsan. Maecenas semper est ut
+                    nunc feugiat, vel ultrices ligula commodo. Donec eget pulvinar
+                    nunc, eget pharetra risus.
+                </div>
             </div>
             <div class="blog">
-                <p class="blog__title" id="blog">BLOG</p>
+                <div class="blog__title" id="blog"><a href="{% url 'blog-posts' %}" class="blog__link">BLOG POSTS</a></div>
                 <div class="card__container">
                     {% for post in blogs %}
-                    <div class="blog__card card-left">
-                        <p class="card__title"><a href="/blog/{{ post.slug }}" class="card__link">{{ post.title }}</a></p>
-                        <div class="card__image"><img src="{{ post.image.url }}" alt="image"></div>
-                        <div class="card__text">{{ post.short_description }}.</div>
-                        <div class="card__date">Created: {{ post.created_at }}</div>
-                    </div>
+                        <div class="blog__card mg-50">
+                            <p class="card__title"><a href="/blog/{{ post.slug }}" class="card__link">{{ post.title }}</a></p>
+                            <div class="card__image"><img src="{{ post.image.url }}" alt="image"></div>
+                            <div class="card__text">{{ post.short_description }}.</div>
+                            <div class="card__date">Created: {{ post.created_at }}</div>
+                        </div>
                     {% endfor %}
                 </div>
             </div>
