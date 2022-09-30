@@ -8,7 +8,7 @@
             <img
                 src="{% if user.image %} {{ user.image.url }} {% else %} {% static 'image/users/user_default_avatar.png' %} {% endif %}"
                 alt="Avatar"
-                class="profile__avatar"
+                class="profile__avatar shadow"
             >
             <form action="{% url 'accounts:profile-view' %}" method="post" enctype="multipart/form-data">
                 {% csrf_token %}

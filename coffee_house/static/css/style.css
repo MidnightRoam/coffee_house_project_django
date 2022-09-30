@@ -165,12 +165,12 @@ header, .header {
     width: 365px;
     height: 484px;
     background: #FFFFFF;
-    border-bottom: 3px solid #675a5a;
+    border-bottom: 3px solid #817070;
 }
 
 .blog__card:hover {
     box-sizing: border-box;
-    border-bottom: 10px solid #675a5a;
+    border-bottom: 10px solid #817070;
 }
 
 .card__container {
@@ -217,7 +217,7 @@ header, .header {
     background-position: center;
     background-size: cover;
     margin: 24px 20px 24px 20px;
-    border: 5px solid #BC8F66;
+    border: 5px solid #bc8f66;
     border-radius: 1em;
     border-top-right-radius: 10% 30%;
 }
@@ -232,6 +232,7 @@ header, .header {
     color: #333;
     padding: 0px 20px 46px 20px;
     text-align: justify;
+
 }
 
 .card__date {
@@ -714,6 +715,7 @@ footer {
     line-height: 30px;
     text-align: justify;
     border-bottom: 3px solid #675a5a;
+    letter-spacing: 1.5px;
 }
 
 .personal__date {
@@ -1200,7 +1202,6 @@ footer {
 
 .post__card {
     margin: 50px 50px 30px 50px;
-    border: 3px solid rgba(114, 107, 99, 0.986);
     border-radius: 1em;
 }
 
@@ -1242,7 +1243,7 @@ footer {
 /* Story page styles */
 .story-page__container {
     width: auto;
-    height: auto;
+    height: 1550px;
     display: flex;
     justify-content: center;
 }
@@ -1253,13 +1254,17 @@ footer {
     align-items: center;
     flex-direction: column;
     background-color: #f0f0f0;
-    height: 1400px;
+    height: 1500px;
     width: 1000px;
     border-radius: 1.5em;
+    -webkit-box-shadow: 10px 10px 23px -5px rgba(0,0,0,0.31);
+    -moz-box-shadow: 10px 10px 23px -5px rgba(0,0,0,0.31);
+    box-shadow: 10px 10px 23px -5px rgba(0,0,0,0.31);
 }
 
 .story-page__title {
     display: flex;
+    color: #333;
     font-size: 44px;
     font-weight: 500;
     padding: 20px;
@@ -1271,12 +1276,13 @@ footer {
     height: auto;
     font-style: normal;
     font-weight: 300;
-    font-size: 20px;
+    font-size: 22px;
     line-height: 30px;
     color: #333;
     text-align: justify;
     padding: 20px;
     border-radius: 1.5em;
+    text-align: justify;
 }
 
 .story-page__img {
@@ -1284,4 +1290,10 @@ footer {
     height: 450px;
     border-radius: 1.5em;
     margin-bottom: 25px;
+}
+
+.shadow {
+    -webkit-box-shadow: 10px 10px 23px -5px rgba(0,0,0,0.31);
+    -moz-box-shadow: 10px 10px 23px -5px rgba(0,0,0,0.31);
+    box-shadow: 10px 10px 23px -5px rgba(0,0,0,0.31);
 }

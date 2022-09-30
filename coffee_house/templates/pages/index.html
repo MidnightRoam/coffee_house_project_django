@@ -15,7 +15,7 @@
                 <span class="story__title"><a href="{% url 'story-view' %}" class="blog__link">STORY</a>
                     <img
                         src="https://source.unsplash.com/X4RJG4aNi8o/1920x1080"
-                        class="story__image text-image-left border-bot"
+                        class="story__image text-image-left border-bot shadow"
                         alt=""
                     >
                 </span>
@@ -35,7 +35,7 @@
                 <div class="blog__title" id="blog"><a href="{% url 'blog-posts' %}" class="blog__link">BLOG POSTS</a></div>
                 <div class="card__container">
                     {% for post in blogs %}
-                        <div class="blog__card mg-50 border-bot">
+                        <div class="blog__card mg-50 border-bot shadow">
                             <p class="card__title"><a href="/blog/{{ post.slug }}" class="card__link">{{ post.title }}</a></p>
                             <div class="card__image"><img src="{{ post.image.url }}" alt="image"></div>
                             <div class="card__text">{{ post.short_description }}.</div>
