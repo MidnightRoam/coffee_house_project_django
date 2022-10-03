@@ -7,5 +7,5 @@ urlpatterns = [
     path('404/', NotFoundPageView.as_view(), name='404'),
     path('story/', StoryView.as_view(), name='story-view'),
     path('blog-posts/', BlogPostsView.as_view(), name='blog-posts'),
-    path('blog/<slug:blog_slug>/', BlogDetailView.as_view(), name="blog-detail"),
+    path('blog-posts/blog/<slug:blog_slug>/', BlogDetailView.as_view(), name="blog-detail"),
 ]

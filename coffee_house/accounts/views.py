@@ -87,3 +87,4 @@ def profile(request):
         form = UserProfileForm(instance=request.user)
     context = {'form': form}
     return render(request, 'accounts/profile.html', context)
+
