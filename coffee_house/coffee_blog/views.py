@@ -1,4 +1,6 @@
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, get_object_or_404
+from django.utils.decorators import method_decorator
 from django.views.generic import DetailView, ListView, TemplateView
 
 from coffee_blog.models import Blog, Order
@@ -13,6 +15,7 @@ class IndexView(ListView):
         return Blog.objects.filter(is_published=True)[:3]
 
 
+@method_decorator(login_required(login_url="/accounts/signin"), name='dispatch')
 class OrderView(ListView):
     """Order page view"""
     template_name = 'pages/order.html'

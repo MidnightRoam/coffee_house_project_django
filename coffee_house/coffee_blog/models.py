@@ -3,6 +3,7 @@ from django.urls import reverse
 
 
 class Blog(models.Model):
+    """Blog model"""
     title = models.CharField(max_length=250)
     image = models.ImageField(upload_to='img')
     text = models.TextField()
@@ -20,6 +21,7 @@ class Blog(models.Model):
 
 
 class ProductCategory(models.Model):
+    """Product category model"""
     name = models.CharField("Category", max_length=64)
 
     def __str__(self):
@@ -31,6 +33,7 @@ class ProductCategory(models.Model):
 
 
 class Product(models.Model):
+    """Product model"""
     name = models.CharField(max_length=250)
     price = models.PositiveIntegerField()
     quantity = models.PositiveIntegerField()
@@ -41,6 +44,6 @@ class Product(models.Model):
 
 
 class Order(models.Model):
-    user_name = models.CharField(max_length=250)
-    user_surname = models.CharField(max_length=250)
+    """Order model"""
+    user_surname = models.CharField(max_length=250, null=True, blank=True)
     product = models.ForeignKey(Product, on_delete=models.CASCADE, null=True, blank=True)

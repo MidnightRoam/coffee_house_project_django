@@ -77,9 +77,9 @@ class SignInView(ListView):
 
 @login_required(login_url='/accounts/signin')
 def profile(request):
+    """User profile view"""
     if request.method == "POST":
         form = UserProfileForm(data=request.POST, files=request.FILES, instance=request.user)
-
         if form.is_valid():
             form.save()
             return HttpResponseRedirect(reverse('accounts:profile-view'))
