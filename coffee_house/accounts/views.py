@@ -9,36 +9,11 @@ from django.views.generic import ListView, CreateView
 from .forms import UserLoginForm, UserRegistrationForm, UserProfileForm
 
 
-class SignUpView(ListView):
+class SignUpView(CreateView):
     """User registration logic"""
-    form = UserRegistrationForm()
+    form_class = UserRegistrationForm
     template_name = 'accounts/signup.html'
     success_url = reverse_lazy('accounts:signin')
-
-    def post(self, request):
-        form = UserRegistrationForm(data=request.POST)
-        if form.is_valid():
-            form.save()
-            return HttpResponseRedirect(reverse_lazy('accounts:signin'))
-        else:
-            print(form.errors)
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['form'] = UserRegistrationForm()
-        return context
-
-    def get_queryset(self):
-        pass
-
-
-# class SignUpView(CreateView):
-#     form = UserRegistrationForm()
-#     template_name = 'accounts/signup.html'
-#     success_url = reverse_lazy('accounts:signin')
-#
-#     def get_queryset(self):
-#         pass
 
 
 class SignInView(View):

@@ -76,21 +76,27 @@ class UserProfileForm(UserChangeForm):
     image = forms.ImageField(widget=forms.FileInput(), required=False)
     first_name = forms.CharField(widget=forms.TextInput(attrs={
         'id': "profile__name",
+        'placeholder': 'First name'
     }))
     last_name = forms.CharField(widget=forms.TextInput(attrs={
-        'id': "profile__surname"
+        'id': "profile__surname",
+        'placeholder': 'Last name'
     }))
     age = forms.CharField(widget=forms.TextInput(attrs={
-        'id': "age__input"
+        'id': "age__input",
+        'placeholder': 'Age',
     }), required=False)
     sex = forms.CharField(widget=forms.TextInput(attrs={
-        'id': "sex__input"
+        'id': "sex__input",
+        'placeholder': 'Sex'
     }), required=False)
     country = forms.CharField(widget=forms.TextInput(attrs={
-        'id': "country__input"
+        'id': "country__input",
+        'placeholder': "Country"
     }), required=False)
     city = forms.CharField(widget=forms.TextInput(attrs={
-        'id': "city__input"
+        'id': "city__input",
+        'placeholder': 'City'
     }), required=False)
 
     class Meta:
