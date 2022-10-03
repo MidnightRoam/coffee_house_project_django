@@ -2,7 +2,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
 from django.urls import reverse_lazy, reverse
 from django.contrib import auth, messages
-from django.shortcuts import HttpResponseRedirect, render
+from django.shortcuts import HttpResponseRedirect, render, redirect
 from django.views import View
 from django.views.generic import ListView, CreateView
 
@@ -14,6 +14,10 @@ class SignUpView(CreateView):
     form_class = UserRegistrationForm
     template_name = 'accounts/signup.html'
     success_url = reverse_lazy('accounts:signin')
+
+    def form_invalid(self, form):
+        messages.add_message(self.request, messages.ERROR, "* Please enter the valid data")
+        return redirect('accounts:signup')
 
 
 class SignInView(View):
@@ -82,4 +86,3 @@ def profile(request):
         form = UserProfileForm(instance=request.user)
     context = {'form': form}
     return render(request, 'accounts/profile.html', context)
-
