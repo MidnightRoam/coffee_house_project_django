@@ -33,12 +33,14 @@
                 </div>
             </form>
         </div>
-<!--        <div class="error_messages">-->
+<!--        {% if form.errors %}-->
+<!--        <div class="error_messages shadow">-->
 <!--            <div class="error-body">-->
-<!--                <p class="cross">&#10006;</p>-->
+<!--                <button type="button" class="cross-close transition">&#10006;</button>-->
 <!--                <p class="error__title">Error!</p>-->
-<!--                <p class="error_text">Some text about errors...</p>-->
+<!--                {{ form.error }}-->
 <!--            </div>-->
 <!--        </div>-->
+<!--        {% endif %}-->
     </div>
 {% endblock %}

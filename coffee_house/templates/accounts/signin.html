@@ -14,6 +14,11 @@
                 <div class="login-info">
                     <span class="margin_bot">{{ form.username }}</span>
                     <span>{{ form.password }}</span>
+                    {% for message in messages %}
+                        <div class="error-body">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
                     <a class="login__link" href="#">Forgot password?</a>
                     <span>
                         <button class="signup__btn">Sign In</button>
@@ -24,5 +29,16 @@
                 </div>
             </form>
         </div>
+<!--        {% if messages %}-->
+<!--            <div class="error_messages shadow">-->
+<!--                <div class="error-body">-->
+<!--                    {% for message in messages %}-->
+<!--                    <button type="button" class="cross-close transition">&#10006;</button>-->
+<!--                    <p class="error__title">Error!</p>-->
+<!--                        * {{ message }}-->
+<!--                    {% endfor %}-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        {% endif %}-->
     </div>
 {% endblock %}
