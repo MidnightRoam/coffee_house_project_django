@@ -1,10 +1,9 @@
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth.forms import UserCreationForm
 from django.urls import reverse_lazy, reverse
 from django.contrib import auth, messages
 from django.shortcuts import HttpResponseRedirect, render, redirect
 from django.views import View
-from django.views.generic import ListView, CreateView
+from django.views.generic import ListView, CreateView, UpdateView
 
 from .forms import UserLoginForm, UserRegistrationForm, UserProfileForm
 
@@ -82,6 +81,8 @@ def profile(request):
         if form.is_valid():
             form.save()
             return HttpResponseRedirect(reverse('accounts:profile-view'))
+        else:
+            print(form.errors.as_data())
     else:
         form = UserProfileForm(instance=request.user)
     context = {'form': form}

@@ -14,7 +14,7 @@
                 <div class="image__input">
                     {{ form.image }}
                 </div>
-                <p class="profile__fullname">{{ user }}</p>
+                <p class="profile__fullname">{{ form.username }}</p>
                 <p class="user__joined">Joined: {{ user.date_joined }}</p>
                 <p class="profile__title">Contact</p>
                 <div class="fullname__input">
@@ -22,7 +22,7 @@
                     {{ form.last_name }}
                 </div>
                 <div class="profile__contact">
-                    <div class="email__input">
+                    <div class="email__input glitch">
                         {{ form.email }}
                     </div>
                     <p class="profile__title" id="general__title">General</p>

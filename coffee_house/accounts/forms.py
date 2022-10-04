@@ -67,11 +67,11 @@ class UserProfileForm(UserChangeForm):
     """User profile change form"""
     username = forms.CharField(widget=forms.TextInput(attrs={
         'readonly': True,
-        'id': 'profile__name'
+        'id': 'username__profile'
     }))
     email = forms.CharField(widget=forms.EmailInput(attrs={
         'readonly': True,
-        'id': 'email__input'
+        'id': 'email__input',
     }))
     image = forms.ImageField(widget=forms.FileInput(), required=False)
     first_name = forms.CharField(widget=forms.TextInput(attrs={
