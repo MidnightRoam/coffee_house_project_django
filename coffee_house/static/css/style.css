@@ -48,6 +48,11 @@ header, .header {
     text-transform: uppercase;
 }
 
+.glitch:hover {
+    animation: glitch .25s ease-out;
+}
+
+
 .main {
     display: flex;
     flex-direction: column;
@@ -1294,4 +1299,47 @@ footer {
     -webkit-box-shadow: 10px 10px 23px -5px rgba(0,0,0,0.31);
     -moz-box-shadow: 10px 10px 23px -5px rgba(0,0,0,0.31);
     box-shadow: 10px 10px 23px -5px rgba(0,0,0,0.31);
+}
+
+/* glitch effect style */
+@keyframes glitch {
+    O% {
+        transform: translateX(0);
+        text-shadow:
+            0 0 0 #0227f5,
+            0 0 0 #4affff,
+            0 0 0 #ff0825,
+            0 0 0 #fffb19;
+    }
+
+    20% {
+        transform: translateX(-0.1em);
+        text-shadow:
+            0.1em 0 0 #0227f5,
+            -0.05em 0 0 #4affff,
+            -0.1em 0 0 #ff0825,
+            -0.2em 0 0 #fffb19;
+    }
+
+    40% {
+        transform: translateX(0.05em);
+        text-shadow:
+            -0.05em 0 0 #0227f5,
+            -0.1em 0 0 #4affff,
+             0.05em 0 0 #ff0825,
+             0 0 0 #fffb19;
+    }
+
+    60% {
+        transform: translateX(-0.1em);
+        text-shadow:
+             0.2em 0 0 #0227f5,
+             0.05em 0 0 #4affff,
+             -0.1em 0 0 #ff0825,
+             -0.05em 0 0 #fffb19;
+    }
+
+    80% {
+        transform: translateX(0.05em );
+    }
 }
