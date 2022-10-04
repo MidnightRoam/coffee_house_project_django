@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     'coffee_blog',
     'accounts',
+    'contact',
     'ckeditor',
     'ckeditor_uploader',
 ]

@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load contact_tags %}
 {% load static %}
 
 {% block title %}<title>Coffee House</title>{% endblock %}
@@ -46,14 +47,7 @@
                     {% endfor %}
                 </div>
             </div>
-            <div class="contact">
-                <p class="contact__title" id="subscribe">Subscribe</p>
-                <div class="contact__field input-margin">
-                    <input id="contact" type="email" class="contact__input" placeholder="enter your email">
-                    <label for="contact"></label>
-                </div>
-                <button class="contact__button">SUBMIT</button>
-            </div>
+            {% contact_form %}
         </div>
 {% endblock %}
 </div>

@@ -23,7 +23,8 @@ urlpatterns = [
     path('', include('coffee_blog.urls')),
     path('ckeditor/', include('ckeditor_uploader.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
-    path('accounts/', include('accounts.urls'))
+    path('accounts/', include('accounts.urls')),
+    path('contact/', include('contact.urls')),
 ]
 
 if settings.DEBUG:
