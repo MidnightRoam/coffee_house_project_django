@@ -3,6 +3,7 @@
     <div class="contact__field input-margin">
         {% csrf_token %}
         {{ contact_form }}
+        {{ form.captcha }}
     </div>
     <button class="contact__button">SUBMIT</button>
 </form>

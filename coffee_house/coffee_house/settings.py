@@ -11,6 +11,10 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 import os
 from pathlib import Path
+from dotenv import load_dotenv, find_dotenv
+
+# .env settings
+load_dotenv(find_dotenv())
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-d-kpsy%la^b-0hxa^ph8(30qy89@98l5hy40vey82me!9gi0u%'
+SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -43,6 +47,7 @@ INSTALLED_APPS = [
     'contact',
     'ckeditor',
     'ckeditor_uploader',
+    'snowpenguin.django.recaptcha3',
 ]
 
 MIDDLEWARE = [
@@ -83,8 +88,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'Coffee_House',
-        'USER': 'root',
-        'PASSWORD': 'Momoru00',
+        'USER': os.getenv('MYSQL_USER'),
+        'PASSWORD': os.getenv('MYSQL_PASSWORD'),
         'HOST': '127.0.0.1',
         'PORT': '3306',
         'OPTIONS': {
@@ -216,3 +221,9 @@ LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 
 AUTH_USER_MODEL = 'accounts.User'
+
+# Google reCAPTCHA settings
+RECAPTCHA_PUBLIC_KEY = os.getenv('RECAPTCHA_PUBLIC_KEY')
+RECAPTCHA_PRIVATE_KEY = os.getenv('RECAPTCHA_PRIVATE_KEY')
+RECAPTCHA_DEFAULT_ACTION = "generic"
+RECAPTCHA_SCORE_THRESHOLD = 0.5
