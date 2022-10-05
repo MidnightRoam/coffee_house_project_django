@@ -15,7 +15,7 @@
                     {{ form.image }}
                 </div>
                 <p class="profile__fullname">{{ form.username }}</p>
-                <p class="user__joined">Joined: {{ user.date_joined }}</p>
+                <p class="user__joined">Joined: {{ user.date_joined|date }}</p>
                 <p class="profile__title">Contact</p>
                 <div class="fullname__input">
                     {{ form.first_name }}

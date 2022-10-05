@@ -63,7 +63,14 @@ class NotFoundPageView(TemplateView):
     template_name = 'pages/page_404.html'
 
 
-class StoryView(TemplateView):
+class StoryView(ListView):
     """Story page view"""
     template_name = 'pages/story_page.html'
 
+    def get_queryset(self):
+        pass
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['STORY_PAGE'] = Blog.objects.get(slug='STORY_PAGE')
+        return context
