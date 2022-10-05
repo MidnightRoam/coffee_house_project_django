@@ -14,6 +14,11 @@ class IndexView(ListView):
     def get_queryset(self, count=3):
         return Blog.objects.filter(is_published=True).order_by("-id")[:count]
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['HOMEPAGE_STORY'] = Blog.objects.get(slug='HOMEPAGE_STORY')
+        return context
+
 
 @method_decorator(login_required(login_url="/accounts/signin"), name='dispatch')
 class OrderView(ListView):

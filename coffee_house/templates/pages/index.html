@@ -16,22 +16,14 @@
                 <span class="story__title"><a href="{% url 'story-view' %}" class="blog__link">STORY</a>
                     <a href="{% url 'story-view' %}">
                         <img
-                            src="https://source.unsplash.com/X4RJG4aNi8o/1920x1080"
+                            src="{{ HOMEPAGE_STORY.image.url }}"
                             class="story__image text-image-left border-bot shadow"
                             alt="story-image"
                         >
                     </a>
                 </span>
                 <div class="story__text text-image-left">
-                    Lorem ipsum dolor sit amet,
-                    consectetur adipiscing elit. Aenean varius eget arcu quis cursus.
-                    Nunc id tortor imperdiet, vestibulum orci sed, gravida orci.
-                    Cras a enim ac elit eleifend euismod. Class aptent taciti sociosqu ad
-                    litora torquent per conubia nostra, per inceptos himenaeos.
-                    Praesent mattis ultrices est, congue ullamcorper erat bibendum
-                    pulvinar. In accumsan dapibus accumsan. Maecenas semper est ut
-                    nunc feugiat, vel ultrices ligula commodo. Donec eget pulvinar
-                    nunc, eget pharetra risus.
+                    {{ HOMEPAGE_STORY.text|safe }}
                 </div>
             </div>
             <div class="blog">
