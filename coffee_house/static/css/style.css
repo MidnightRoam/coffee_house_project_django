@@ -691,7 +691,7 @@ footer {
 .personal__title {
     color: #353839;
     height: 80px;
-    width: auto;
+    width: 90%;
     font-style: normal;
     font-weight: 500;
     font-size: 44px;
@@ -705,7 +705,7 @@ footer {
 .blog__image {
     background-position: center;
     background-size: cover;
-    width: 813px;
+    width: 713px;
     height: 500px;
     border-radius: 1em;
     border: 1.5px solid grey;
@@ -713,7 +713,7 @@ footer {
 
 .personal__text {
     color: #333;
-    width: 50%;
+    width: 43%;
     padding-top: 55px;
     padding-bottom: 55px;
     font-style: normal;
@@ -726,14 +726,14 @@ footer {
 
 .personal__date {
     color: grey;
-    width: 50%;
+    width: 43%;
     font-style: normal;
     font-weight: 200;
     font-size: 24px;
     line-height: 30px;
     text-align: justify;
     padding-top: 15px;
-    text-align: center;
+    text-align: end;
 }
 
 .btn__blog {
@@ -743,7 +743,7 @@ footer {
     text-decoration: none;
     background: #937171;
     color: #543636;
-    border-color: #817070;
+    border-color: #937171;
     border-radius: 0.5em;
 }
 
