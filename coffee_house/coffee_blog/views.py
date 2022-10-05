@@ -11,8 +11,8 @@ class IndexView(ListView):
     template_name = 'pages/index.html'
     context_object_name = 'blogs'
 
-    def get_queryset(self):
-        return Blog.objects.filter(is_published=True)[:3]
+    def get_queryset(self, count=3):
+        return Blog.objects.filter(is_published=True).order_by("-id")[:count]
 
 
 @method_decorator(login_required(login_url="/accounts/signin"), name='dispatch')
@@ -21,9 +21,6 @@ class OrderView(ListView):
     template_name = 'pages/order.html'
     model = Order
     context_object_name = 'products'
-
-    # def get_queryset(self):
-    #     return Product.objects.all()[:4]
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
