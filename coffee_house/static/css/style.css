@@ -546,12 +546,14 @@ input::placeholder {
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
 
 .order__coffee {
     display: flex;
     flex-direction: column;
     margin-left: 352px;
+    margin-top: 84px;
 }
 
 .item {
@@ -559,10 +561,6 @@ input::placeholder {
     align-items: center;
     margin-top: 17px;
     width: 350px;
-}
-
-.item__top {
-    margin-top: 84px;
 }
 
 .order__coffee {

@@ -5,8 +5,19 @@ from django.utils.safestring import mark_safe
 
 from .models import Blog, Order, Product, ProductCategory
 
-admin.site.register(Order)
-admin.site.register(ProductCategory)
+
+@admin.register(ProductCategory)
+class ProductCategoryAdmin(admin.ModelAdmin):
+    list_display = ("name", "description")
+    list_filter = ("name", "description")
+    search_fields = ("name", "description")
+
+
+@admin.register(Order)
+class OrderAdmin(admin.ModelAdmin):
+    list_display = ("user", "product", "quantity", "created_timestamp")
+    list_filter = ("created_timestamp", "quantity", "product")
+    list_editable = ["product", "quantity"]
 
 
 class BlogAdminForm(forms.ModelForm):

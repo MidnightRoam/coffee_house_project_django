@@ -42,12 +42,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'coffee_blog',
-    'accounts',
-    'contact',
     'ckeditor',
     'ckeditor_uploader',
     'snowpenguin.django.recaptcha3',
+
+    'coffee_blog',
+    'accounts',
+    'contact',
 ]
 
 MIDDLEWARE = [

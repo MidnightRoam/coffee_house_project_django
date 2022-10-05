@@ -32,19 +32,6 @@ checkboxElements.forEach(element => {
     })
 })
 
-// function totalCounting() {
-//     for (const product of goods) {
-//         if (checkboxElement.checked) {
-//             if (inputGoods.value <= 0 || inputGoods.value > 100) {
-//                 inputGoods.value = 1;
-//             }
-//             totalPrice += parseInt(checkboxElement.dataset.price) * parseInt(inputGoods.value);
-//         } else {
-//             totalPrice -= parseInt(checkboxElement.value) * parseInt(inputGoods.value);
-//         }
-//     }
-// }
-
 buttonElement.addEventListener("click", function () {
     let total = 0;
     user.name = inputName.value;

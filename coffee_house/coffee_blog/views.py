@@ -3,7 +3,7 @@ from django.shortcuts import render, get_object_or_404
 from django.utils.decorators import method_decorator
 from django.views.generic import DetailView, ListView, TemplateView
 
-from coffee_blog.models import Blog, Order
+from coffee_blog.models import Blog, Order, Product
 
 
 class IndexView(ListView):
@@ -27,7 +27,8 @@ class OrderView(ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['title'] = 'Order page'
+        context['drinks'] = Product.objects.filter(category=1)
+        context['food'] = Product.objects.filter(category=2)
         return context
 
 
