@@ -6,6 +6,7 @@ from django.views import View
 from django.views.generic import ListView, CreateView, UpdateView
 
 from .forms import UserLoginForm, UserRegistrationForm, UserProfileForm
+from coffee_blog.models import Order
 
 
 class SignUpView(CreateView):
@@ -85,5 +86,7 @@ def profile(request):
             print(form.errors.as_data())
     else:
         form = UserProfileForm(instance=request.user)
-    context = {'form': form}
+    user_orders = Order.objects.filter(user=request.user)
+    context = {'form': form,
+               'orders': user_orders}
     return render(request, 'accounts/profile.html', context)

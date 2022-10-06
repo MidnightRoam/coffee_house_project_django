@@ -38,5 +38,15 @@
                 <button class="profile__btn">Save changes</button>
             </form>
         </div>
+        <div class="user-orders">
+        <p class="user-orders__title">Your latest orders</p>
+        {% for order in orders %}
+            <ol class="orders__list">
+                <ul class="orders__item">
+                    {{ order.pk }}. {{ order }} | Qty: {{ order.quantity }} | Order date: {{ order.created_timestamp|date }}
+                </ul>
+            </ol>
+        {% endfor %}
+        </div>
     </div>
 {% endblock %}

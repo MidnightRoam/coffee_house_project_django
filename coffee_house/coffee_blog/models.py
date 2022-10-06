@@ -57,3 +57,6 @@ class Order(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE, null=True, blank=True)
     created_timestamp = models.DateTimeField(default=datetime.now())
     quantity = models.PositiveIntegerField(default=0)
+
+    def __str__(self):
+        return self.product.name

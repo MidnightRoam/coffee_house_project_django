@@ -742,13 +742,17 @@ footer {
     margin-top: 50px;
     text-decoration: none;
     background: #937171;
-    color: #543636;
+    color: #fff;
     border-color: #937171;
     border-radius: 0.5em;
 }
 
 .btn__blog:hover {
-    color: #fff;
+    color: #543636;
+}
+
+.btn__blog:active {
+    border-color: #fff;
 }
 
 /* Style all font awesome icons */
@@ -863,6 +867,7 @@ footer {
 .profile-background {
     height: 1200px;
     padding: 45px;
+    margin: 0px 0px 0px 430px;
     border-radius: 0.5em;
     background: #675a5a;
     -webkit-box-shadow: 13px 21px 16px 14px rgba(34, 60, 80, 0.2);
@@ -913,6 +918,39 @@ footer {
     font-size: 18px;
     font-weight: 200;
 }
+
+.user-orders {
+    height: 900px;
+    width: 400px;
+    background: #675a5a;
+    margin: 200px 0px 0px 50px;
+    border-radius: 0.5em;
+    -webkit-box-shadow: 13px 21px 16px 14px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 13px 21px 16px 14px rgba(34, 60, 80, 0.2);
+    box-shadow: 13px 21px 16px 14px rgba(34, 60, 80, 0.2);
+}
+
+.user-orders__title {
+    color: #fff;
+    font-size: 36px;
+    font-weight: 500;
+    text-align: center;
+    padding: 30px;
+    border-bottom: 3px solid #817070;
+}
+
+.orders__list {
+    display: flex;
+    justify-content: center;
+}
+
+.orders__item {
+    color: #fff;
+    font-size: 18px;
+    padding: 15px 0px 5px 0px;
+    border-bottom: 3px solid #817070;
+}
+
 #username__profile {
     font-size: 40px;
     border: none;
