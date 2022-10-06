@@ -10,9 +10,34 @@
       <p class="personal__title">{{ object.title|safe }}</p>
       <div><img src="{{ object.image.url }}" class="blog__image border" alt="image"></div>
       <div class="personal__text">{{ object.text|safe }}</div>
+      {% if object.author %}
+        <p class="post__author">Author of post: {{ object.author }}</p>
+      {% endif %}
       <p class="personal__date">Post created: {{ object.created_at }}</p>
       <p class="personal__date">Post updated: {{ object.updated_at }}</p>
       <a href="{% url 'blog-posts' %}" class="btn btn__blog">back to posts</a>
-    </div>
-  </div>
+
+      <!-- Blog comments section -->
+<!--      <form action="#" method="post">-->
+<!--        {% csrf_token %}-->
+<!--        <div class="comments">-->
+<!--          <p class="comments__title">Comments: </p>-->
+<!--          {% for comment in object.comments %}-->
+<!--            {{ comment }}-->
+<!--          {% endfor %}-->
+<!--          <div class="comments-second">-->
+<!--            <label for="contactusername">Your username</label>-->
+<!--            <input type="text" name="name" id="contactusername" required="" value="{{ user.username }}">-->
+<!--          </div>-->
+<!--          <div class="comments-first">-->
+<!--            <label for="contactcomment">-->
+<!--              Your message-->
+<!--            </label>-->
+<!--            <textarea name="text" id="contactcomment" rows="5" cols="100" required=""></textarea>-->
+<!--          </div>-->
+<!--          <button class="btn comment__btn">New Comment</button>-->
+<!--        </div>-->
+<!--      </form>-->
+<!--    </div>-->
+<!--  </div>-->
 {% endblock %}

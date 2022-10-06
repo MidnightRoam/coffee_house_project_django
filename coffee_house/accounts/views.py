@@ -75,7 +75,7 @@ class SignInView(View):
 
 
 @login_required(login_url='/accounts/signin')
-def profile(request):
+def profile(request, count=15):
     """User profile view"""
     if request.method == "POST":
         form = UserProfileForm(data=request.POST, files=request.FILES, instance=request.user)
@@ -86,7 +86,7 @@ def profile(request):
             print(form.errors.as_data())
     else:
         form = UserProfileForm(instance=request.user)
-    user_orders = Order.objects.filter(user=request.user)
+    user_orders = Order.objects.filter(user=request.user).order_by("-id")[:count]
     context = {'form': form,
                'orders': user_orders}
     return render(request, 'accounts/profile.html', context)

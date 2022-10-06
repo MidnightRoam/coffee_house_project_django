@@ -1,6 +1,7 @@
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.utils.decorators import method_decorator
+from django.views import View
 from django.views.generic import DetailView, ListView, TemplateView
 
 from coffee_blog.models import Blog, Order, Product

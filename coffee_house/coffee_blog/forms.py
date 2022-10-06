@@ -1,9 +1,9 @@
-# from django import forms
-# from django.contrib.auth.forms import AuthenticationForm, UserCreationForm, UserChangeForm
-#
-# from .models import Order
-#
-#
+from django import forms
+from django.contrib.auth.forms import AuthenticationForm, UserCreationForm, UserChangeForm
+
+from .models import BlogComment
+
+
 # class OrderForm(forms.ModelForm):
 #     """Order form"""
 #     first_name = forms.CharField(widget=forms.TextInput(attrs={

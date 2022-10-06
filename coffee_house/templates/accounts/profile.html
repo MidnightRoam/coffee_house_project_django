@@ -41,11 +41,11 @@
         <div class="user-orders">
         <p class="user-orders__title">Your latest orders</p>
         {% for order in orders %}
-            <ol class="orders__list">
-                <ul class="orders__item">
+            <ul class="orders__list">
+                <li class="orders__item">
                     {{ order.pk }}. {{ order }} | Qty: {{ order.quantity }} | Order date: {{ order.created_timestamp|date }}
-                </ul>
-            </ol>
+                </li>
+            </ul>
         {% endfor %}
         </div>
     </div>

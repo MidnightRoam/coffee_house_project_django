@@ -35,6 +35,11 @@
                     {% endif%}
                 </div>
             </div>
+            {% if user.is_authenticated %}
+                <div class="new-post__btn">
+                    <a class="btn new-post">New post</a>
+                </div>
+            {% endif %}
         </div>
     </div>
 {% endblock %}

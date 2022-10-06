@@ -680,6 +680,7 @@ footer {
 }
 
 .blog__page {
+    height: auto;
     margin: 100px;
     border-radius: 1em;
     background: #EFEFEF;
@@ -734,6 +735,13 @@ footer {
     text-align: justify;
     padding-top: 15px;
     text-align: end;
+}
+
+.post__author {
+    color: #fff;
+    color: grey;
+    font-weight: 200;
+    font-size: 24px;
 }
 
 .btn__blog {
@@ -920,7 +928,7 @@ footer {
 }
 
 .user-orders {
-    height: 900px;
+    height: 800px;
     width: 400px;
     background: #675a5a;
     margin: 200px 0px 0px 50px;
@@ -942,6 +950,7 @@ footer {
 .orders__list {
     display: flex;
     justify-content: center;
+    font-weight: 300;
 }
 
 .orders__item {
@@ -949,6 +958,7 @@ footer {
     font-size: 18px;
     padding: 15px 0px 5px 0px;
     border-bottom: 3px solid #817070;
+     list-style-type: none;
 }
 
 #username__profile {
@@ -1235,7 +1245,7 @@ footer {
     flex-direction: row;
     flex-wrap: wrap;
     background: #EFEFEF;
-    margin: 80px 200px 100px 200px;
+    margin: 80px 200px 50px 200px;
     padding-bottom: 50px;
     border-radius: 1em;
 }
@@ -1258,6 +1268,54 @@ footer {
     margin-left: 476px;
     margin-right: 476px;
     border-radius: 0.5em;
+}
+/*
+.new-post__btn {
+    display: flex;
+    justify-content: center;
+}
+
+.new-post {
+    background: #333;
+    text-align: center;
+    padding-top: 10px;
+    text-decoration: none;
+    background: #937171;
+    color: #fff;
+    border-color: #937171;
+    border-radius: 0.5em;
+}
+
+.new-post:hover {
+    color: #543636;
+}
+
+.new-post:active {
+    border-color: #fff;
+}
+*/
+
+/* Comments section styles */
+
+.comments {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.comment__btn {
+    background: #333;
+    text-align: center;
+    text-decoration: none;
+    background: #937171;
+    color: #fff;
+    border-color: #937171;
+    border-radius: 0.5em;
+}
+
+#contactusername {
+    border-color: #937171;
+    color: #937171;
 }
 
 /* Pagination section style */
