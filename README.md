@@ -1,4 +1,4 @@
-# COFFEE HOUSE | DJANGO PROJECT
+# COFFEE HOUSE | Django fullstack project
 Full stack project of a coffee house using HTML, CSS, JavaScript and Python/Django
 
 Features that i am created when i developed a web app: 
