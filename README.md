@@ -1,7 +1,7 @@
-# COFFEE HOUSE | Django fullstack project
+# <a href="https://midnightroam.pythonanywhere.com">COFFEE HOUSE | Django fullstack project</a>
 Full stack project of a coffee house using HTML, CSS, JavaScript and Python/Django
 <hr />
-### You can view the site by clicking on the <a href="https://midnightroam.pythonanywhere.com">link</a>
+ Site url = https://midnightroam.pythonanywhere.com
  You can register a user yourself or use a test account
  <ul>
    <li>Username: Midnight_Roam</li>
