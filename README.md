@@ -7,7 +7,7 @@ Full stack project of a coffee house using HTML, CSS, JavaScript and Python/Djan
 ###   <li>Username: Midnight_Roam</li>
 ###   <li>Password: User12345</li>
 ### </ul>
-<br />
+<hr />
 Features that i am developed in a web app: 
 <ul> 
   <li>Layouts and css styles</li>
