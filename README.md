@@ -1,7 +1,7 @@
 # COFFEE HOUSE | Django fullstack project
 Full stack project of a coffee house using HTML, CSS, JavaScript and Python/Django
 
-You can view the site by clicking on the <a href="https://midnightroam.pythonanywhere.com">link</a>
+## You can view the site by clicking on the <a href="https://midnightroam.pythonanywhere.com">link</a>
 
 Features that i am developed in a web app: 
 <ul> 
