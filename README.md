@@ -2,6 +2,11 @@
 Full stack project of a coffee house using HTML, CSS, JavaScript and Python/Django
 
 ## You can view the site by clicking on the <a href="https://midnightroam.pythonanywhere.com">link</a>
+### You can register a user yourself or use a test account
+### <ul>
+      <li>Username: Midnight_Roam</li>
+      <li>Password: User12345</li>
+    </ul>
 
 Features that i am developed in a web app: 
 <ul> 
