@@ -2,7 +2,7 @@
 Full stack project of a coffee house using HTML, CSS, JavaScript and Python/Django
 <hr />
  Site url = https://midnightroam.pythonanywhere.com
- You can register a user yourself or use a test account
+ <p>You can register a user yourself or use a test account</p>
  <ul>
    <li>Username: Midnight_Roam</li>
    <li>Password: User12345</li>
