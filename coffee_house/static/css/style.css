@@ -35,6 +35,12 @@ header, .header {
     flex-direction: row;
 }
 
+.logo_lang {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
 .logo {
     text-decoration: none;
     color: #333;

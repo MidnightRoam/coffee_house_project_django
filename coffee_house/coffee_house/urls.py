@@ -18,15 +18,18 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls.static import static
 
+from coffee_blog.views import NotFoundPageView
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('coffee_blog.urls')),
-    path('ckeditor/', include('ckeditor_uploader.urls')),
-    path('accounts/', include('django.contrib.auth.urls')), # using for logout
     path('accounts/', include('accounts.urls')),
     path('contact/', include('contact.urls')),
+    path('ckeditor/', include('ckeditor_uploader.urls')),
+    path('accounts/', include('django.contrib.auth.urls')), # using for logout
 ]
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
+handler404 = NotFoundPageView.as_view()

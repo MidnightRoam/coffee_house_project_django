@@ -21,6 +21,7 @@ class OrderAdmin(admin.ModelAdmin):
 
 
 class BlogAdminForm(forms.ModelForm):
+    """Admin form with widget CKEditor"""
     text = forms.CharField(widget=CKEditorUploadingWidget())
 
     class Meta:
