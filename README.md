@@ -1,5 +1,5 @@
 # <a href="https://midnightroam.pythonanywhere.com">COFFEE HOUSE | Django fullstack project</a>
-Full stack project of a coffee house using HTML, CSS, JavaScript and Python/Django
+Full-stack project of a coffee house using HTML, CSS, JavaScript and Python/Django
 <hr />
  Site url = https://midnightroam.pythonanywhere.com
  <p>You can register a user yourself or use a test account</p>
